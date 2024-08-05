@@ -11,16 +11,34 @@ class User extends Model {
 
 User.init(
   {
+    // User ID
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
+    // User's name
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    // Saved recipes 
+    saved_recipes: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    // User's age
+    age: {
+      type: DataTypes.INTEGER,
+      allowNull: true,
+    },
+    // Submitted reviews
+    submitted_reviews: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    // User's email
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -29,6 +47,7 @@ User.init(
         isEmail: true,
       },
     },
+    // User's password
     password: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -38,7 +57,7 @@ User.init(
     },
   },
   {
-    // Hooks are used so that if a user is created or updated, the password is encrypted before being stored in the database.
+    // Hooks to encrypt the password before storing it
     hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
