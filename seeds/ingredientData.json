@@ -1,186 +1,326 @@
 [
-    {
-      "name": "Rum"
-    },
-    {
-      "name": "Coconut Cream"
-    },
-    {
-      "name": "Pineapple Juice"
-    },
-    {
-      "name": "Respado Tequila"
-    },
-    {
-      "name": "Lime Juice"
-    },
-    {
-      "name": "Mint"
-    },
-    {
-      "name": "Soda Water"
-    },
-    {
-      "name": "Vodka"
-    },
-    {
-      "name": "Gin"
-    },
-    {
-      "name": "Lemon Juice"
-    },
-    {
-      "name": "Aromatic Bitters"
-    },
-    {
-      "name": "Cognac"
-    },
-    {
-      "name": "Dry Vermouth"
-    },
-    {
-      "name": "Sweet Vermouth"
-    },
-    {
-      "name": "Orange Bitters"
-    },
-    {
-      "name": "Orange Juice"
-    },
-    {
-      "name": "Triple Sec"
-    },
-    {
-      "name": "Bourbon"
-    },
-    {
-      "name": "Egg White"
-    },
-    {
-      "name": "Grenadine"
-    },
-    {
-      "name": "Grapefruit Juice"
-    },
-    {
-      "name": "Apple Juice"
-    },
-    {
-      "name": "Maraschino Liquer"
-    },
-    {
-      "name": "Absinthe"
-    },
-    {
-      "name": "Cranberry Juice"
-    },
-    {
-      "name": "Scotch"
-    },
-    {
-      "name": "Heavy Cream"
-    },
-    {
-      "name": "Elderflower Liquer"
-    },
-    {
-      "name": "Orange Liquer"
-    },
-    {
-      "name": "Rye Whiskey"
-    },
-    {
-      "name": "Apricot Liquer"
-    },
-    {
-      "name": "Coffee Liquer"
-    },
-    {
-      "name": "Blanco Liquer"
-    },
-    {
-      "name": "Agave Syrup"
-    },
-    {
-      "name": "Ginger Ale"
-    },
-    {
-      "name": "Maple Syrup"
-    },
-    {
-      "name": "Irish Cream Liquer"
-    },
-    {
-      "name": "Tonic Water"
-    },
-    {
-      "name": "Espresso"
-    },
-    {
-      "name": "Raspberries"
-    },
-    {
-      "name": "Orange Peel"
-    },
-    {
-      "name": "Cherries"
-    },
-    {
-      "name": "Chocolate Bitters"
-    },
-    {
-      "name": "Ginger Liquer"
-    },
-    {
-      "name": "Limoncello Liquer"
-    },
-    {
-      "name": "Honey"
-    },
-    {
-      "name": "Milk"
-    },
-    {
-      "name": "Ginger Beer"
-    },
-    {
-      "name": "Lemon Lime Soda"
-    },
-    {
-      "name": "Vanila Syrup"
-    },
-    {
-      "name": "Salt"
-    },
-    {
-      "name": "Lime"
-    },
-    {
-      "name": "Brandy"
-    },
-    {
-      "name": "Grape Juice"
-    },
-    {
-      "name": "Blueberry Juice"
-    },
-    {
-      "name": "Cherry Juice"
-    },
-    {
-      "name": "Pomegranate Juice"
-    },
-    {
-      "name": "Olives"
-    },
-    {
-      "name": "Simple Syrup"
-    },
-    {
-      "name": "Sugar"
-    },
-    {
-      "name": "Champagne"
-    }
-  ]
-  
+  {
+    "name": "Rum"
+  },
+  {
+    "name": "Coconut Cream"
+  },
+  {
+    "name": "Pineapple Juice"
+  },
+  {
+    "name": "Respado Tequila"
+  },
+  {
+    "name": "Lime Juice"
+  },
+  {
+    "name": "Mint"
+  },
+  {
+    "name": "Soda Water"
+  },
+  {
+    "name": "Vodka"
+  },
+  {
+    "name": "Gin"
+  },
+  {
+    "name": "Lemon Juice"
+  },
+  {
+    "name": "Aromatic Bitters"
+  },
+  {
+    "name": "Cognac"
+  },
+  {
+    "name": "Dry Vermouth"
+  },
+  {
+    "name": "Sweet Vermouth"
+  },
+  {
+    "name": "Orange Bitters"
+  },
+  {
+    "name": "Orange Juice"
+  },
+  {
+    "name": "Triple Sec"
+  },
+  {
+    "name": "Bourbon"
+  },
+  {
+    "name": "Egg White"
+  },
+  {
+    "name": "Grenadine"
+  },
+  {
+    "name": "Grapefruit Juice"
+  },
+  {
+    "name": "Apple Juice"
+  },
+  {
+    "name": "Maraschino Liqueur"
+  },
+  {
+    "name": "Absinthe"
+  },
+  {
+    "name": "Cranberry Juice"
+  },
+  {
+    "name": "Scotch"
+  },
+  {
+    "name": "Heavy Cream"
+  },
+  {
+    "name": "Elderflower Liqueur"
+  },
+  {
+    "name": "Orange Liqueur"
+  },
+  {
+    "name": "Rye Whiskey"
+  },
+  {
+    "name": "Apricot Liqueur"
+  },
+  {
+    "name": "Coffee Liqueur"
+  },
+  {
+    "name": "Blanco Liqueur"
+  },
+  {
+    "name": "Agave Syrup"
+  },
+  {
+    "name": "Ginger Ale"
+  },
+  {
+    "name": "Maple Syrup"
+  },
+  {
+    "name": "Irish Cream Liqueur"
+  },
+  {
+    "name": "Tonic Water"
+  },
+  {
+    "name": "Espresso"
+  },
+  {
+    "name": "Raspberries"
+  },
+  {
+    "name": "Orange Peel"
+  },
+  {
+    "name": "Cherries"
+  },
+  {
+    "name": "Chocolate Bitters"
+  },
+  {
+    "name": "Ginger Liqueur"
+  },
+  {
+    "name": "Limoncello Liqueur"
+  },
+  {
+    "name": "Honey"
+  },
+  {
+    "name": "Milk"
+  },
+  {
+    "name": "Ginger Beer"
+  },
+  {
+    "name": "Lemon Lime Soda"
+  },
+  {
+    "name": "Vanilla Syrup"
+  },
+  {
+    "name": "Salt"
+  },
+  {
+    "name": "Lime"
+  },
+  {
+    "name": "Brandy"
+  },
+  {
+    "name": "Grape Juice"
+  },
+  {
+    "name": "Blueberry Juice"
+  },
+  {
+    "name": "Cherry Juice"
+  },
+  {
+    "name": "Pomegranate Juice"
+  },
+  {
+    "name": "Olives"
+  },
+  {
+    "name": "Simple Syrup"
+  },
+  {
+    "name": "Sugar"
+  },
+  {
+    "name": "Champagne"
+  },
+  {
+    "name": "Blackberry Liqueur"
+  },
+  {
+    "name": "Creme de Cassis"
+  },
+  {
+    "name": "Peach Schnapps"
+  },
+  {
+    "name": "Amaretto"
+  },
+  {
+    "name": "Baileys Irish Cream"
+  },
+  {
+    "name": "Cointreau"
+  },
+  {
+    "name": "Curacao"
+  },
+  {
+    "name": "Jagermeister"
+  },
+  {
+    "name": "Campari"
+  },
+  {
+    "name": "Sambuca"
+  },
+  {
+    "name": "Frangelico"
+  },
+  {
+    "name": "Galliano"
+  },
+  {
+    "name": "Grand Marnier"
+  },
+  {
+    "name": "Drambuie"
+  },
+  {
+    "name": "Benedictine"
+  },
+  {
+    "name": "Chartreuse"
+  },
+  {
+    "name": "Strega"
+  },
+  {
+    "name": "Midori"
+  },
+  {
+    "name": "Kahlua"
+  },
+  {
+    "name": "Anisette"
+  },
+  {
+    "name": "Licor 43"
+  },
+  {
+    "name": "Blue Curacao"
+  },
+  {
+    "name": "Crème de Menthe"
+  },
+  {
+    "name": "Crème de Cacao"
+  },
+  {
+    "name": "Lillet Blanc"
+  },
+  {
+    "name": "Prosecco"
+  },
+  {
+    "name": "Mezcal"
+  },
+  {
+    "name": "Sour Mix"
+  },
+  {
+    "name": "Orgeat Syrup"
+  },
+  {
+    "name": "Falernum"
+  },
+  {
+    "name": "Cynar"
+  },
+  {
+    "name": "Fernet Branca"
+  },
+  {
+    "name": "Suze"
+  },
+  {
+    "name": "Aperol"
+  },
+  {
+    "name": "Averna"
+  },
+  {
+    "name": "Peychaud's Bitters"
+  },
+  {
+    "name": "Peach Bitters"
+  },
+  {
+    "name": "Celery Bitters"
+  },
+  {
+    "name": "Rosemary"
+  },
+  {
+    "name": "Thyme"
+  },
+  {
+    "name": "Basil"
+  },
+  {
+    "name": "Cinnamon Stick"
+  },
+  {
+    "name": "Nutmeg"
+  },
+  {
+    "name": "Clove"
+  },
+  {
+    "name": "Black Pepper"
+  },
+  {
+    "name": "Cardamom"
+  },
+  {
+    "name": "Star Anise"
+  }
+]
