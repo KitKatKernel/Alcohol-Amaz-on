@@ -1,37 +1,33 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// Create Project model and datatypes, including the user_id foreign key.
-class Project extends Model {}
+// Beverage model definition
+class Beverage extends Model {}
 
-Project.init(
+Beverage.init(
   {
+    // Beverage ID: Primary key, auto-incremented
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
+    // Beverage name
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
+    // Beverage description
     description: {
-      type: DataTypes.STRING,
-    },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    needed_funding: {
-      type: DataTypes.FLOAT,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
-    user_id: {
+    // Foreign key referencing Ingredient model's ingredient ID.
+    ingredient_id: {
       type: DataTypes.INTEGER,
       references: {
-        model: 'user',
+        model: 'ingredient',
         key: 'id',
       },
     },
@@ -41,8 +37,8 @@ Project.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'beverage',
   }
 );
 
-module.exports = Project;
+module.exports = Beverage;
