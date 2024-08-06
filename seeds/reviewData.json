@@ -1,0 +1,17 @@
+[
+    {
+      "user_id": 1,
+      "beverage_id": 1,
+      "review": "This drink ruined my marriage, 10/10!"
+    },
+    {
+      "user_id": 2,
+      "beverage_id": 2,
+      "review": "Perfect after a bad work day."
+    },
+    {
+      "user_id": 3,
+      "beverage_id": 3,
+      "review": "A bit too strong for my taste, but still good."
+    }
+  ]
