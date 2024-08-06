@@ -13,5 +13,240 @@
       "name": "Margarita",
       "description": "A classic cocktail made with tequila, lime juice, and Cointreau.",
       "ingredient_ids": [3, 4, 8]
+    },
+    {
+      "name": "Martini",
+      "description": "A classic cockatil made with gin and dry vermouth, garnished with an olive or lemon twist.",
+      "ingredients": ["Gin", "Dry Vermouth", "Olive"]
+    },
+    {
+      "name": "Old Fasioned",
+      "description": "A simple blend of bourbon, sugar, bitters, and a twist of citrus rind.",
+      "ingredients": ["Bourbon", "Angostura bitters", "Sugar", "Water"]
+    },
+    {
+      "name": "Daiquiri",
+      "description": "A sweet and sour mix of rum, lime juice, and simple syrup.",
+      "ingredients": ["Light rum", "Lime", "Powdered sugar"]
+    },
+    {
+      "name": "Manhattan",
+      "description": "A sophisticated mix of rye whiskey, sweet vermouth, and bitters, garnished with a cherry.",
+      "ingredients": ["Sweet Vermouth", "Bourbon", "Angostura bitters", "Ice", "Maraschino cherry", "Orange peel"]
+    },
+    {
+      "name": "Negroni",
+      "description": "An Italian favorite made with gin, campari, and sweet vermouth.",
+      "ingredients": ["Sweet Vermouth", "Gin", "Campari"]
+    },
+    {
+      "name": "Moscow Mule",
+      "description": "A spicy, refreshing mix of vodka, ginger beer, and lime juice.",
+      "ingredients": ["Vodka", "ginger beer", "lime juice"]
+    },
+    {
+      "name": "Cosmopolitan",
+      "description": "A chic blend of vodka, triple sec, cranberry juice, and lime juice.",
+      "ingredients": ["Vodka", "Lime juice", "Cointreau", "Cranberry juice"]
+    },
+    {
+      "name": "Bloody Mary",
+      "description": "A savory cocktail made with vodka, tomato juice, and various spices and flavorings.",
+      "ingredients": ["Vodka", "Tomato juice", "Lemon juice", "Worcestershire sauce", "Tabasco", "Lime"]
+    },
+    {
+      "name": "Whiskey Sour",
+      "description": "A tangy mix of whiskey, lemon juice, and simple syrup.",
+      "ingredients": ["Blended whiskey", "Lemon", "Powdered sugar", "Cherry"]
+    },
+    {
+      "name": "Tom Collins",
+      "description": "A refreshing mix of gin, lemon juice, sugar, and soda water.",
+      "ingredients": ["Gin", "Lemon juice", "Sugar", "Club soda", "Maraschino cherry", "Orange"]
+    },
+    {
+      "name": "Mai Tai",
+      "description": "A Polynesian-style cocktail made with rum, lime juice, orgeat syrup, and orange liqueur",
+      "ingredients": ["Light rum", "Orgeat syrup", "Triple sec", "Sweet and Sour", "Cherry"]
+    },
+    {
+      "name": "Gimlet",
+      "description": "A simple, refreshing mix of gin and lime juice.",
+      "ingredients": ["Gin", "Lime juice", "Sugar syrup", "Lime"]
+    },
+    {
+      "name": "Mint Julep",
+      "description": "A Southern classic made with bourbon, mint, sugar, and water.",
+      "ingredients": ["Mint", "Bourbon", "Powdered sugar", "Water"]
+    },
+    {
+      "name": "Sazerac",
+      "description": "A New Orleans classic made with rye whiskey, absinthe, sugar, and Peychaud's bitters.",
+      "ingredients": ["Ricard", "Sugar", "Peychaud bitters", "Water", "Bourbon", "Lemon peel"]
+    },
+    {
+      "name": "Singapore Sling",
+      "description": "A fruity mix of gin, cherry brandy, Benedictine, and fruit juices.",
+      "ingredients": ["Cherry brandy", "Grenadine", "Gin", "Sweet and sour", "Carbonated water", "Cherry"]
+    },
+    {
+      "name": "French 75",
+      "description": "A sparkling mix of gin, lemon juice, sugar, and Champagne.",
+      "ingredients": ["Gin", "Sugar", "Lemon juice", "Champagne", "Orange", "Maraschino cherry"]
+    },
+    {
+      "name": "Sidecar",
+      "description": "A tangy blend of cognac triple sec, and lemon juice.",
+      "ingredients": ["Cognac", "Cointreau", "Lemon juice"]
+    },
+    {
+      "name": "Amaretto Sour",
+      "description": "A sweet and sour mix of ameretto liqueur and lemon juice.",
+      "ingredients": ["Cognac", "Cointreau", "Lemon juice"]
+    },
+    {
+      "name": "Dark and Stormy",
+      "description": "A spicy, refreshing mix of dark rum and ginger beer.",
+      "ingredients": ["Dark rum", "Ginger beer."]
+    },
+    {
+      "name": "Aperol Spritz",
+      "description": "A light, bubbly mix of Aperol, Prosecco, and soda water.",
+      "ingredients": ["Aperol", "Prosecco", "Soda water"]
+    },
+    {
+      "name": "Paloma",
+      "description": "A refreshing mix of tequila, grapefruit soda, and lime juice.",
+      "ingredients": ["Grape soda", "Tequila"]
+    },
+    {
+      "name": "Caipirinha",
+      "description": "A Brazilian favorite made with cachaça, sugar, and lime.",
+      "ingredients": ["Sugar", "Lime", "Cachaca"]
+    },
+    {
+      "name": "Vesper",
+      "description": "A sophisticated mix of gin, vodka, and Lillet Blanc, made famous by James Bond.",
+      "ingredients": ["Gin", "Vodka", "Lillet Blanc"]
+    },
+    {
+      "name": "Irish Coffee",
+      "description": "A warm blend of Irish whiskey, hot coffee, sugar, and whipped cream.",
+      "ingredients": ["Irish whiskey", "Coffee", "Sugar", "Whipped cream."]
+    },
+    {
+      "name": "Brandy Alexander",
+      "description": "A creamy mix of brandy, dark creme de cacao, and cream.",
+      "ingredients": ["Brandy", "Creme de Cacao", "Light cream", "Nutmeg"]
+    },
+    {
+      "name": "Pisco Sour",
+      "description": "A tangy mix of pisco, lime juice, sumple syrup, egg white, and bitters.",
+      "ingredients": ["Pisco", "Lemon juice", "Sugar", "Ice", "Egg white"]
+    },
+    {
+      "name": "Blue Hurricane",
+      "description": "A vibrant, tropical mix of rum, blue curacao, pineapple juice, and lime juice.",
+      "ingredients": ["Rum", "Dark rum", "Passoa", "Blue Curacao", "Sweet and Sour", "Ice"]
+    },
+    {
+      "name": "Bellini",
+      "description": "A sparkling mix of Prosecco and peach puree.",
+      "ingredients": ["Champagne", "Peach schnapps."]
+    },
+    {
+      "name": "White Russian",
+      "description": "A creamy mix of vodka, coffee liqueur, and cream.",
+      "ingredients": ["Vodka", "Coffee liqueur", "Light cream"]
+    },
+    {
+      "name": "Black Russian",
+      "description": "A simple mix of vodka and coffee liqueur.",
+      "ingredients": ["Coffee liqueur", "Vodka"]
+    },
+    {
+      "name": "Lemon Drop",
+      "description": "A sweet and sour mix of vodka, lemon juice, and simple syrup.",
+      "ingredients": ["Vodka", "Cointreau", "Lemon"]
+    },
+    {
+      "name": "Planter's Punch",
+      "description": "A fruity mix of dark rum, citrus juices, and grenadine.",
+      "ingredients": ["Dark rum", "Orgeat syrup", "Orange juice", "Pineapple juice."]
+    },
+    {
+      "name": "Ramos Gin Fizz",
+      "description": "A frothy blend of gin, lemon and lime juice, egg white, cream, and soda water.",
+      "ingredients": ["Gin", "Lemon juice", "Sugar syrup,", "Cream", "Egg white", "Vanilla extract", "Soda water"]
+    },
+    {
+      "name": "Clover Club",
+      "description": "A pre-Prohibition mix of gin, lemon juice, raspberry syrup, and egg white.",
+      "ingredients": ["Gin", "Grenadine", "Lemon", "Egg white"]
+    },
+    {
+      "name": "Rum Punch",
+      "description": "A tropical mix of rum, citrus juices, and grenadine.",
+      "ingredients": ["Rum", "Ginger ale", "Fruit punch", "Orange juice", "Ice"]
+    },
+    {
+      "name": "Sea Breeze",
+      "description": "A refreshing mix of vodka, cranberry juice, and grapefruit juice.",
+      "ingredients": ["Vodka", "Grapefruit juice", "Cranberry juice"]
+    },
+    {
+      "name": "Long Island Iced Tea",
+      "description": "A classic, potent mix of bodka, tequila, rum, gin, triple sec, lemon juice, and cola.",
+      "ingredients": ["Vodka", "Tequila", "Light rum", "Gin", "Coca-Cola", "Lemon peel"]
+    },
+    {
+      "name": "Tequila Sunrise",
+      "description": "A colorful mix of tequila, orange juice, and grenadine.",
+      "ingredients": ["Tequila", "Orange juice", "Grenadine"]
+    },
+    {
+      "name": "Boulevardier",
+      "description": "A sophisticated mix of bourbon, sweet vermouth, and Campari.",
+      "ingredients": ["Campari", "Sweet Vermouth", "Rye whiskey", "Orange peel"]
+    },
+    {
+      "name": "Aviation",
+      "description": "A classic mix of gin, maraschino liqueur, creme de violette, and lemon juice.",
+      "ingredients": ["Gin", "Lemon juice", "Maraschino liqueur"]
+    },
+    {
+      "name": "Bahama Mama",
+      "description": "A tropical mix of rum, coconut liqueur, pineapple juice, and grenadine.",
+      "ingredients": ["Rum", "Dark rum", "Banana liqueur", "Grenadine", "Pineapple juice", "Orange juice", "Sweet and Sour"]
+    },
+    {
+      "name": "Zombie",
+      "description": "A potent mix of various rums, fruit juices, and grenadine.",
+      "ingredients": ["Rum", "Gold rum", "151 proof rum", "Pernod", "Grenadine", "Lime juice", "Angostura bitters"]
+    },
+    {
+      "name": "Cuba Libre",
+      "description": "A simple mix of rum, cola, and lime juice.",
+      "ingredients": ["Light rum", "Lime", "Coca-Cola"]
+    },
+    {
+      "name": "Rusty Nail",
+      "description": "A smoky blend of Scotch whisky and Drambuie",
+      "ingredients": ["Scotch", "Drambuie", "Lemon peel"]
+    },
+    {
+      "name": "Pornstar Martini",
+      "description": "A fruity mix of vodka, passion fruit liqueur, and lime juice.",
+      "ingredients": ["Vodka", "Passoa", "Passion fruit juice", "Lime", "Prosecco"]
+    },
+    {
+      "name": "Kir Royale",
+      "description": "A sparkling mix of creme de cassis and Champagne.",
+      "ingredients": ["Creme de Cassis", "Champagne."]
+    },
+    {
+      "name": "Blue Lagoon",
+      "description": "A vibrant mix of vodka, blue curacao, and lemonade.",
+      "ingredients": ["Vodka", "Blue Curacao", "Lemonade", "Cherry"]
     }
   ]
