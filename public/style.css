@@ -1,0 +1,40 @@
+:root {
+ --cambridge-blue: #8da999ff;
+ --coyote: #786f52ff;
+ --brilliant-rose: #f15bb5ff;
+ --sunglow: #ffc857ff;
+ --tea-green: #bfffbcff;
+ --border-radius: 0.3rem;
+}
+
+body {
+    font-family: Arial;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: flex-start;
+    background-color: var(--cambridge-blue);
+}
+
+header {
+
+}
+
+main {
+
+}
+
+aside{
+
+}
+
+nav{
+    display: flex;
+    background-color: var(--coyote);
+}
+
+.beverage-card {
+    background-color: var(--coyote);
+   
+}
