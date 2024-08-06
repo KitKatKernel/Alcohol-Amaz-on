@@ -2,10 +2,12 @@
 <div class="beverage-card">
   <h1>{{beverage.name}}</h1>
   <p>{{beverage.description}}</p>
-  <h3>Ingredients</h3>
-  <ul>
-    <li>{{beverage.ingredient_id[0]}}</li>
-    <li>{{beverage.ingredient_id[1]}}</li>
-    <li>{{beverage.ingredient_id[2]}}</li>
-  </ul>
+  <figure>
+    <figcaption>Ingredients</figcaption>
+    <ul>
+      {{#each beverage.ingredients as |ingredient|}}
+        <li>{{ingredient}}</li>
+      {{/each}}
+    </ul>
+  </figure>
 </div>
