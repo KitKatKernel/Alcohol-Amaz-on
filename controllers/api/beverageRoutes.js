@@ -29,7 +29,7 @@ router.get('/:id', async (req, res) => {
   }
 });
 
-// Create a beverage recipe
+// Create a beverage recipe.
 router.post('/', async (req, res) => {
   try {
     const newBeverage = await Beverage.create(req.body);
