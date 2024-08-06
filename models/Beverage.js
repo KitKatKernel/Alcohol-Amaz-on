@@ -1,7 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// Beverage model definition
 class Beverage extends Model {}
 
 Beverage.init(
