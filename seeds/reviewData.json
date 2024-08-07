@@ -13,5 +13,50 @@
       "user_id": 3,
       "beverage_id": 3,
       "review": "A bit too strong for my taste, but still good."
+    },
+    {
+      "user_id": 4,
+      "beverage_id": 4,
+      "review": "This particular drink was suprisingly good at removing any sense of inhibition from me. Didn't come to my senses until after I drove my Tesla full speed over a hill in San Fransisco and started sinking into the bay. 10/10."
+    },
+    {
+      "user_id": 5,
+      "beverage_id": 5,
+      "review": "One sip of this baby and you'll feel more focused than a hawk on adderall. A bit too sweet, 8/10."
+    },
+    {
+      "user_id": 6,
+      "beverage_id": 6,
+      "review": "Just the right blend of sweet and savory concoctions, perfect for small get-togethers!"
+    },
+    {
+      "user_id": 7,
+      "beverage_id": 7,
+      "review": "A perfect Saturday sunset sipper! My husband and I love it!"
+    },
+    {
+      "user_id": 8,
+      "beverage_id": 8,
+      "review": "Not a big fan, a bit too tart."
+    },
+    {
+      "user_id": 9,
+      "beverage_id": 9,
+      "review": "Almost enough to make me forget about the atrocities. Almost."
+    },
+    {
+      "user_id": 10,
+      "beverage_id": 10,
+      "review": "A guy I knew that went to prison said this was his go-to drink. I now understand why he was in prison."
+    },
+    {
+      "user_id": 11,
+      "beverage_id": 11,
+      "review": "Trying to forget? This is the drink for you. Trying to remember? This is the drink for you. Not trying to do either? This is definitely the drink for you."
+    },
+    {
+      "user_id": 12,
+      "beverage_id": 12,
+      "review": "Absolutely amazing. No words."
     }
   ]

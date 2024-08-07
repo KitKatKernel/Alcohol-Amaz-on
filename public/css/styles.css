@@ -15,7 +15,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background-color: var(--cambridge-blue);
+    background-color: var(--sunglow);
 }
 
 header {
@@ -33,11 +33,15 @@ main {
 }
 
 aside{
-    flex: 0;
-    background-color: var(--tertiary);
-    padding: 80px;
+    background-color: var(--cambridge-blue);
+    padding: 8px;
     text-align: left;
     color: var(--light);
+    width: 30%;
+    margin: 5px;
+    border: var(--coyote);
+    border-style: dotted;
+    border-width: medium;
 }
 
 nav{
@@ -45,9 +49,28 @@ nav{
     background-color: var(--tea-green);
 }
 
+footer{
+    background: var(--coyote);
+    color: var(--brilliant-rose);
+    height: 50px;
+    text-align: center;
+}
+
+.login{
+    background-color: var(--coyote);
+    width: 60%;
+    padding: 10px;
+    margin: 10px;
+}
+
 .beverage-card {
     background-color: var(--coyote);
-   
+    width: 60%;
+    padding: 10px;
+    margin: 10px;
+    float:right;
+    clear:both;
+
 }
 
 .card-header {
@@ -57,7 +80,7 @@ nav{
     padding: 0.625rem;
     border: 3px solid var(--primary);
     border-radius: var(--border-radius);
-    border-style: solid;
+    border-style: dotted;
     border-width: medium;
 }
 
