@@ -9,6 +9,13 @@ class User extends Model {
   }
 }
 
+// function to calculate age from date of birth
+const calculateAge = (dob) => {
+  const diff = Date.now() - new Date(dob).getTime();
+  const age = new Date(diff).getUTCFullYear() - 1970;
+  return age;
+};
+
 User.init(
   {
     // User ID
@@ -32,6 +39,11 @@ User.init(
     age: {
       type: DataTypes.INTEGER,
       allowNull: true,
+    },
+    // User's date of birth
+    date_of_birth: {
+      type: DataTypes.DATE,
+      allowNull: false,
     },
     // Submitted reviews
     submitted_reviews: {
@@ -57,14 +69,20 @@ User.init(
     },
   },
   {
-    // Hooks to encrypt the password before storing it
+    // Hooks to encrypt the password before storing it and to calculate age
     hooks: {
       beforeCreate: async (newUserData) => {
         newUserData.password = await bcrypt.hash(newUserData.password, 10);
+        newUserData.age = calculateAge(newUserData.date_of_birth);
         return newUserData;
       },
       beforeUpdate: async (updatedUserData) => {
-        updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        if (updatedUserData.password) {
+          updatedUserData.password = await bcrypt.hash(updatedUserData.password, 10);
+        }
+        if (updatedUserData.date_of_birth) {
+          updatedUserData.age = calculateAge(updatedUserData.date_of_birth);
+        }
         return updatedUserData;
       },
     },
