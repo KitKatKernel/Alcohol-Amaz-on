@@ -8,8 +8,28 @@
 </head>
 <body>
   <header>
-    <h1></h1>
+    <h1>Welcome to Amazin' Sip Shop</h1>
   </header>
+   <nav>
+    <button class="btn" href="/">Home</button>
+    {{#if loggedIn}}
+    <button id="logout" class="btn">Logout</button>
+    {{else}}
+    <button class="btn" href="/login">Login</button>
+    {{/if}}
+    <button class="btn" href="/">Account</button>
+    <button class="btn" href="/">Submit Recipe</button>
+    <input type="search" placeholder="Search Recipes"></input>
+  </nav>
   {{{body}}} <!-- This will be replaced by the content of the specific view -->
+<footer>
+  <div>
+    <a href="repo">Git Repository</a>
+    <a href="email">Contact Us</a>
+    <a href="about">About Us</a>
+  </div>
+</footer>
 </body>
 </html>
+
+
