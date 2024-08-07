@@ -1,13 +1,16 @@
-
-<div class="beverage-card">
-  <h1>{{beverage.name}}</h1>
-  <p>{{beverage.description}}</p>
-  <figure>
-    <figcaption>Ingredients</figcaption>
-    <ul>
-      {{#each beverage.ingredients as |ingredient|}}
-        <li>{{ingredient}}</li>
-      {{/each}}
-    </ul>
-  </figure>
-</div>
+<div class="card">
+            <img class="card-img-top" src="" alt="Drink picture">
+            <div class="card-body">
+                <h5 class="card-title">Drink Name</h5>
+                <p class="card-text">Drink Description</p>
+            </div>
+            <ul class="list-group list-flush">
+                {{#each ingredients as |ingredient|}}
+                    <li class="list-group-item">{{ingredient}}</li>
+                {{/each}}
+            </ul>
+            <div class="card-body">
+                <a href="/" class="btn btn-primary">Reviews</a>
+                <a href="/" class="btn btn-primary">Add to Cart!</a>
+            </div>
+        </div>
