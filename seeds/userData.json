@@ -3,7 +3,7 @@
     "name": "Alice",
     "email": "alice@example.com",
     "password": "password12345",
-    "age": 25,
+    "date_of_birth": 25,
     "saved_recipes": "",
     "submitted_reviews": ""
   },
@@ -11,7 +11,7 @@
     "name": "Bob",
     "email": "bob@example.com",
     "password": "password12345",
-    "age": 30,
+    "date_of_birth": 30,
     "saved_recipes": "",
     "submitted_reviews": ""
   }

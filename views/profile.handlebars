@@ -1,0 +1,35 @@
+
+  <h2>Create a Recipe</h2>
+  <form id="addBeverage" action="/api/beverages" method="POST">
+    <label>Drink Name</label>
+    <input type="text" name="beverage_name" placeholder="Tasty Drink" required>
+    <label>Drink Instructions</label>
+    <input type="text" name="description" placeholder="Description" required>
+    <select id="ingredientDrop" multiple>
+      <option>Select Ingredient</option>
+    </select>
+    <button type="submit">Create</button>
+  </form>
+  {{!-- <form action="/api/users/logout" method="POST">
+    <button type="submit">Logout</button>
+  </form> --}}
+{{!-- {{#if beverages.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Projects:</h3>
+
+    {{#each beverages as |beverage|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{beverage.id}}">{{beverage.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{beverage.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
+{{/if}} --}}
+
+<script src="../public/js/add-beverage.js"></script>

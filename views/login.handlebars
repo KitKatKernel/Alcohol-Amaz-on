@@ -8,9 +8,10 @@
   </form>
 
   <h2>Or create a new account</h2>
-  <form action="/api/users" method="POST">
+  <form action="/api/users/register" method="POST">
     <input type="text" name="name" placeholder="Name" required>
     <input type="email" name="email" placeholder="Email" required>
+    <input type="date" name="date_of_birth"  required>
     <input type="password" name="password" placeholder="Password" required>
     <button type="submit">Sign Up</button>
   </form>

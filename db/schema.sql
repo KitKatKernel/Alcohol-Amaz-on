@@ -1,3 +1,11 @@
+--Drop/Create DB
+DROP DATABASE IF EXISTS ass_db;
+CREATE DATABASE ass_db;
+
+-- Makes it so all of the following code will affect ass_db --
+\c ass_db;
+
+
 -- Create User table
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
@@ -9,7 +17,7 @@ CREATE TABLE users (
     submitted_reviews TEXT
 );
 
--- Create Ingredient table
+-- Create Ingredient tablessss
 CREATE TABLE ingredients (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL
@@ -20,7 +28,7 @@ CREATE TABLE beverages (
     id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description TEXT,
-    ingredient_ids INTEGER[] REFERENCES ingredients(id)
+    ingredient_ids INTEGER [] REFERENCES ingredients(id)
 );
 
 -- Create Review table

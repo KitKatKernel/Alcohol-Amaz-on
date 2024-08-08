@@ -1,14 +1,15 @@
 const router = require('express').Router();
-const { Project } = require('../models');
+const { Beverage, User } = require('../models');
+const withAuth = require('../utils/auth');
 
 // Render the homepage with all projects
 router.get('/', async (req, res) => {
   try {
-    const projectData = await Project.findAll(); // Fetch all projects from the database
-    const projects = projectData.map((project) => project.get({ plain: true })); // Serialize data
+    const beverageData = await Beverage.findAll(); // Fetch all projects from the database
+    const beverages = beverageData.map((project) => project.get({ plain: true })); // Serialize data
 
     res.render('home', {
-      projects, // Pass projects data to the template
+      beverages, // Pass projects data to the template
       logged_in: req.session.logged_in // Pass login status to the template
     });
   } catch (err) {
@@ -19,7 +20,7 @@ router.get('/', async (req, res) => {
 // Render the login page
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/profile'); // Redirect to profile if already logged in
+    res.redirect('/'); // Redirect to profile if already logged in
     return;
   }
 
@@ -27,27 +28,22 @@ router.get('/login', (req, res) => {
 });
 
 // Render the profile page
-router.get('/profile', async (req, res) => {
-  if (!req.session.logged_in) {
-    res.redirect('/login'); // Redirect to login if not logged in
-    return;
-  }
-
+router.get('/profile', withAuth, async (req, res) => {
   try {
-    const projectData = await Project.findAll({
-      where: {
-        user_id: req.session.user_id // Fetch projects for the logged-in user
-      }
+    // Find the logged in user based on the session ID
+    const userData = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      include: [{ model: Beverage }],
     });
 
-    const projects = projectData.map((project) => project.get({ plain: true })); // Serialize data
+    const user = userData.get({ plain: true });
 
     res.render('profile', {
-      projects, // Pass projects data to the template
-      logged_in: req.session.logged_in // Pass login status to the template
+      ...user,
+      logged_in: true
     });
   } catch (err) {
-    res.status(500).json(err); // Send error response if something goes wrong
+    res.status(500).json(err);
   }
 });
 

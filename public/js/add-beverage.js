@@ -5,10 +5,10 @@ async function newFormHandler(event) {
   event.preventDefault();
   const beverage_name = document.querySelector('#beverage_name').value;
   const description = document.querySelector('#description').value;
-  const ingredient = document.querySelector('#ingredient_id').value;
+  const ingredient = document.querySelector('#ingredientDrop').value;
  
   // ? Send fetch request to add a new dish
-  const response = await fetch(`/api/beverage`, {
+  const response = await fetch(`/api/beverages`, {
     method: 'POST',
     body: JSON.stringify({
       beverage_name,
@@ -28,7 +28,7 @@ async function newFormHandler(event) {
 }
 
 document
-  .querySelector('.new-beverage-form')
+  .querySelector('.addBeverage')
   .addEventListener('submit', newFormHandler);
 
 function getDropDown() {
@@ -37,7 +37,6 @@ function getDropDown() {
         method: "GET",
          }
       )
-  
         .then(function (data) {
           
           for (let i = 0; i < Ingredient.length; i++) {
