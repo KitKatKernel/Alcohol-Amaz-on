@@ -8,6 +8,86 @@
     "submitted_reviews": ""
   },
   {
+    "name": "Lucy",
+    "email": "lucy@example.com",
+    "password": "password12345",
+    "date_of_birth": 25,
+    "saved_recipes": "",
+    "submitted_reviews": ""
+  },
+  {
+    "name": "Stan",
+    "email": "stan@example.com",
+    "password": "password12345",
+    "date_of_birth": 25,
+    "saved_recipes": "",
+    "submitted_reviews": ""
+  },
+  {
+    "name": "Eugene",
+    "email": "eugene@example.com",
+    "password": "password12345",
+    "date_of_birth": 25,
+    "saved_recipes": "",
+    "submitted_reviews": ""
+  },
+  {
+    "name": "Rosa",
+    "email": "rosa@example.com",
+    "password": "password12345",
+    "date_of_birth": 25,
+    "saved_recipes": "",
+    "submitted_reviews": ""
+  },
+  {
+    "name": "Louise",
+    "email": "Louise@example.com",
+    "password": "password12345",
+    "date_of_birth": 25,
+    "saved_recipes": "",
+    "submitted_reviews": ""
+  },
+  {
+    "name": "Frodo",
+    "email": "frodo@example.com",
+    "password": "password12345",
+    "date_of_birth": 25,
+    "saved_recipes": "",
+    "submitted_reviews": ""
+  },
+  {
+    "name": "Linda",
+    "email": "linda@example.com",
+    "password": "password12345",
+    "date_of_birth": 25,
+    "saved_recipes": "",
+    "submitted_reviews": ""
+  },
+  {
+    "name": "Mort",
+    "email": "mort@example.com",
+    "password": "password12345",
+    "date_of_birth": 25,
+    "saved_recipes": "",
+    "submitted_reviews": ""
+  },
+  {
+    "name": "Tina",
+    "email": "tina@example.com",
+    "password": "password12345",
+    "date_of_birth": 25,
+    "saved_recipes": "",
+    "submitted_reviews": ""
+  },
+  {
+    "name": "Teddy",
+    "email": "teddy@example.com",
+    "password": "password12345",
+    "date_of_birth": 25,
+    "saved_recipes": "",
+    "submitted_reviews": ""
+  },
+  {
     "name": "Bob",
     "email": "bob@example.com",
     "password": "password12345",

@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Beverage, Ingredient, Review } = require('../../models');
+const withAuth = require('../../utils/auth');
 
 // Get all beverages recipes
 router.get('/', async (req, res) => {
@@ -30,9 +31,12 @@ router.get('/:id', async (req, res) => {
 });
 
 // Create a beverage recipe.
-router.post('/', async (req, res) => {
+router.post('/', withAuth, async (req, res) => {
   try {
-    const newBeverage = await Beverage.create(req.body);
+    const newBeverage = await Beverage.create({
+      ...req.body,
+      user_id: req.session.user_id,
+  });
     res.status(200).json(newBeverage);
   } catch (err) {
     res.status(400).json(err);

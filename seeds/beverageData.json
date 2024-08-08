@@ -72,7 +72,7 @@
   {
     "name": "Gimlet",
     "description": "A simple, refreshing mix of gin and lime juice.",
-    "ingredient_ids": [9, 5, 61, 5]
+    "ingredient_ids": [9, 5, 61]
   },
   {
     "name": "Mint Julep",
