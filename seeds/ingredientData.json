@@ -181,162 +181,156 @@
   },
   {
     "name": "Champagne"
-    },
-    {
-      "name": "Water"
-    },
-    {
-      "name": "Angostura Bitters"
-    },
-    {
-      "name": "Light Rum"
-    },
-    {
-      "name": "Powdered Sugar"
-    },
-    {
-      "name": "Ice"
-    },
-    {
-      "name": "Maraschino Cherry"
-    },
-    {
-      "name": "Campari"
-    },
-    {
-      "name": "Cointreau"
-    },
-    {
-      "name": "Tomato Juice"
-    },
-    {
-      "name": "Worcestershire Sauce"
-    },
-    {
-      "name": "Tabasco"
-    },
-    {
-      "name": "Blended Whiskey"
-    },
-    {
-      "name": "Lemon"
-    },
-    {
-      "name": "Cherry"
-    },
-    {
-      "name": "Club Soda"
-    },
-    {
-      "name": "Orange"
-    },
-    {
-      "name": "Orgeat Syrup"
-    },
-    {
-      "name": "Sweet and Sour"
-    },
-    {
-      "name": "Sugar Syrup"
-    },
-    {
-      "name": "Ricard"
-    },
-    {
-      "name": "Peychaud Bitters"
-    },
-    {
-      "name": "Cherry Brandy"
-    },
-    {
-      "name": "Carbonated Water"
-    },
-    {
-      "name": "Dark Rum"
-    },
-    {
-      "name": "Aperol"
-    },
-    {
-      "name": "Prosecco"
-    },
-    {
-      "name": "Cachaca"
-    },
-    {
-      "name": "Lillet Blanc"
-    },
-    {
-      "name": "Irish Whiskey"
-    },
-    {
-      "name": "Whipped Cream"
-    },
-    {
-      "name": "Coffee"
-    },
-    {
-      "name": "Creme de Cacao"
-    },
-    {
-      "name": "Light Cream"
-    },
-    {
-      "name": "Nutmeg"
-    },
-    {
-      "name": "Pisco"
-    },
-    {
-      "name": "Passoa"
-    },
-    {
-      "name": "Blue Curacao"
-    },
-    {
-      "name": "Peach Schnapps"
-    },
-    {
-      "name": "Vanilla Extract"
-    },
-    {
-      "name": "Fruit Punch"
-    },
-    {
-      "name": "Coca-Cola"
-    },
-    {
-      "name": "Banana Liquer"
-    },
-    {
-      "name": "Gold Rum"
-    },
-    {
-      "name": "151 Proof Rum"
-    },
-    {
-      "name": "Pernod"
-    },
-    {
-      "name": "Drambuie"
-    },
-    {
-      "name": "Passion Fruit Juice"
-    },
-    {
-      "name": "Creme de Cassis"
-    },
-    {
-      "name": "Lemonade"
   },
   {
-    "name": "Blackberry Liqueur"
+    "name": "Water"
+  },
+  {
+    "name": "Angostura Bitters"
+  },
+  {
+    "name": "Light Rum"
+  },
+  {
+    "name": "Powdered Sugar"
+  },
+  {
+    "name": "Ice"
+  },
+  {
+    "name": "Maraschino Cherry"
+  },
+  {
+    "name": "Campari"
+  },
+  {
+    "name": "Cointreau"
+  },
+  {
+    "name": "Tomato Juice"
+  },
+  {
+    "name": "Worcestershire Sauce"
+  },
+  {
+    "name": "Tabasco"
+  },
+  {
+    "name": "Blended Whiskey"
+  },
+  {
+    "name": "Lemon"
+  },
+  {
+    "name": "Cherry"
+  },
+  {
+    "name": "Club Soda"
+  },
+  {
+    "name": "Orange"
+  },
+  {
+    "name": "Orgeat Syrup"
+  },
+  {
+    "name": "Sweet and Sour"
+  },
+  {
+    "name": "Sugar Syrup"
+  },
+  {
+    "name": "Ricard"
+  },
+  {
+    "name": "Peychaud Bitters"
+  },
+  {
+    "name": "Cherry Brandy"
+  },
+  {
+    "name": "Carbonated Water"
+  },
+  {
+    "name": "Dark Rum"
+  },
+  {
+    "name": "Aperol"
+  },
+  {
+    "name": "Prosecco"
+  },
+  {
+    "name": "Cachaca"
+  },
+  {
+    "name": "Lillet Blanc"
+  },
+  {
+    "name": "Irish Whiskey"
+  },
+  {
+    "name": "Whipped Cream"
+  },
+  {
+    "name": "Coffee"
+  },
+  {
+    "name": "Creme de Cacao"
+  },
+  {
+    "name": "Light Cream"
+  },
+  {
+    "name": "Nutmeg"
+  },
+  {
+    "name": "Pisco"
+  },
+  {
+    "name": "Passoa"
+  },
+  {
+    "name": "Blue Curacao"
+  },
+  {
+    "name": "Peach Schnapps"
+  },
+  {
+    "name": "Vanilla Extract"
+  },
+  {
+    "name": "Fruit Punch"
+  },
+  {
+    "name": "Coca-Cola"
+  },
+  {
+    "name": "Banana Liquer"
+  },
+  {
+    "name": "Gold Rum"
+  },
+  {
+    "name": "151 Proof Rum"
+  },
+  {
+    "name": "Pernod"
+  },
+  {
+    "name": "Drambuie"
+  },
+  {
+    "name": "Passion Fruit Juice"
   },
   {
     "name": "Creme de Cassis"
   },
   {
-    "name": "Peach Schnapps"
+    "name": "Lemonade"
+  },
+  {
+    "name": "Blackberry Liqueur"
   },
   {
     "name": "Amaretto"
@@ -345,16 +339,10 @@
     "name": "Baileys Irish Cream"
   },
   {
-    "name": "Cointreau"
-  },
-  {
     "name": "Curacao"
   },
   {
     "name": "Jagermeister"
-  },
-  {
-    "name": "Campari"
   },
   {
     "name": "Sambuca"
@@ -367,9 +355,6 @@
   },
   {
     "name": "Grand Marnier"
-  },
-  {
-    "name": "Drambuie"
   },
   {
     "name": "Benedictine"
@@ -393,28 +378,13 @@
     "name": "Licor 43"
   },
   {
-    "name": "Blue Curacao"
-  },
-  {
     "name": "Crème de Menthe"
-  },
-  {
-    "name": "Crème de Cacao"
-  },
-  {
-    "name": "Lillet Blanc"
-  },
-  {
-    "name": "Prosecco"
   },
   {
     "name": "Mezcal"
   },
   {
     "name": "Sour Mix"
-  },
-  {
-    "name": "Orgeat Syrup"
   },
   {
     "name": "Falernum"
@@ -427,9 +397,6 @@
   },
   {
     "name": "Suze"
-  },
-  {
-    "name": "Aperol"
   },
   {
     "name": "Averna"
@@ -454,9 +421,6 @@
   },
   {
     "name": "Cinnamon Stick"
-  },
-  {
-    "name": "Nutmeg"
   },
   {
     "name": "Clove"
