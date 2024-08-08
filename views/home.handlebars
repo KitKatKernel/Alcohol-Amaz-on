@@ -6,7 +6,8 @@
         {{> small-beverage-details}}
     </aside> --}}
     <main>
+       {{#each beverages as |beverage|}}
         {{> beverage-details}}
-        {{> beverage-details}}
+    {{/each}}
     </main>
 </body>

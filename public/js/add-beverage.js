@@ -8,7 +8,7 @@ async function newFormHandler(event) {
   const ingredient = document.querySelector('#ingredientDrop').value;
  
   // ? Send fetch request to add a new dish
-  const response = await fetch(`/api/beverages`, {
+  const response = await fetch(`/api/beverages/`, {
     method: 'POST',
     body: JSON.stringify({
       name,
@@ -38,20 +38,24 @@ function getDropDown() {
         method: "GET",
          }
       )
-        .then(function (data) {
+      .then(function (response) {
+        return response.json();
+      })
+
+      .then(function (data) {
           
-          for (let i = 0; i < Ingredient.length; i++) {
-          const ingredient = Ingredient[i]
+        for (let i = 0; i < Ingredient.length; i++) {
+        const ingredient = Ingredient[i]
   
-          const div = document.createElement('option');
+        const div = document.createElement('option');
          
-          div.setAttribute("id", ingredient.id)
-          div.textContent = ingredient.name
+        div.setAttribute("id", ingredient.id)
+        div.textContent = ingredient.name
          
-          ingredientDrop.appendChild(div)
+        ingredientDrop.appendChild(div)
           
-        }})
-      }  
+      }})
+  }  
 
 window.addEventListener("load", (event) => {
   getDropDown()
