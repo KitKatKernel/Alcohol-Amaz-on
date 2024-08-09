@@ -23,15 +23,15 @@
           <li class="nav-item">
             <a class="nav-link" href="/">Home</a>
           </li>
-          {{!-- {{#if loggedIn}} --}}
+          {{#if loggedIn}}
             <li class="nav-item">
               <a class="nav-link" id="logout" href="#">Logout</a>
             </li>
-          {{!-- {{else}} --}}
+          {{else}}
             <li class="nav-item">
               <a class="nav-link" href="/login">Login</a>
             </li>
-          {{!-- {{/if}} --}}
+          {{/if}}
           <li class="nav-item">
             <a class="nav-link" href="/account">Account</a>
           </li>
@@ -39,10 +39,20 @@
             <a class="nav-link" href="/profile">Submit Recipe</a>
           </li>
           <li class="nav-item">
-            <form class="form-inline">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search Recipes" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="searchQuery">Search</button>
+            <form class="form-inline" action="/api/search" method="GET" onsubmit="return validateSearch()">
+              <input class="form-control mr-sm-2" type="search" name="query" placeholder="Search Recipes" aria-label="Search" id="searchInput">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
             </form>
+            <script>
+              function validateSearch() {
+                const query = document.getElementById('searchInput').value.trim();
+                if (!query) {
+                  alert('Please enter a search query.');
+                  return false;
+                }
+                return true;
+              }
+            </script>
           </li>
         </ul>
       </div>

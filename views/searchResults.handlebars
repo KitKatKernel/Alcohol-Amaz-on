@@ -1,0 +1,26 @@
+<h2>Search Results for "{{searchQuery}}"</h2>
+
+{{#if beverages}}
+  <div class="row">
+    {{#each beverages}}
+      <div class="col-md-4">
+        <div class="card mb-4">
+          <div class="card-header">
+            <h3>{{this.name}}</h3>
+          </div>
+          <div class="card-body">
+            <p>{{this.description}}</p>
+            <p><strong>Ingredients:</strong></p>
+            <ul>
+              {{#each this.ingredients}}
+                <li>{{this.name}}</li>
+              {{/each}}
+            </ul>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+{{else}}
+  <p>{{message}}</p>
+{{/if}}

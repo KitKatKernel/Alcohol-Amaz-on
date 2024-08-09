@@ -21,7 +21,14 @@ const sess = {
 
 app.use(session(sess));
 
-const hbs = exphbs.create({}); // Create a handlebars instance
+const hbs = exphbs.create({
+  // OVerriding handlebars security that prevents access to properties that are not “own properties”.
+  runtimeOptions: {
+    allowProtoPropertiesByDefault: true,
+    allowProtoMethodsByDefault: true,
+  },
+});
+
 app.engine('handlebars', hbs.engine);
 app.set('view engine', 'handlebars'); // Set the view engine to handlebars
 app.set('views', path.join(__dirname, 'views')); // Set the views directory

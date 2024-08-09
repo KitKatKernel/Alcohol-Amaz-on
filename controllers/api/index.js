@@ -4,7 +4,9 @@ const reviewRoutes = require('./reviewRoutes');
 const beverageRoutes = require('./beverageRoutes');
 const ingredientRoutes = require('./ingredientRoutes');
 const listRoutes = require('./listRoutes');
+const searchRoutes = require('./searchRoutes'); 
 
+router.use('/', searchRoutes); 
 router.use('/users', userRoutes);
 router.use('/reviews', reviewRoutes);
 router.use('/beverages', beverageRoutes);
