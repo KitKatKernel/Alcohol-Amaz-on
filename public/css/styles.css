@@ -15,13 +15,13 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background-color: var(--sunglow);
+    background-color: var(--cambridge-blue);
 }
 
 header {
     padding: 40px;
   text-align: center;
-  background: var(--coyote);
+  background-color: var(--coyote);
   color: var(--brilliant-rose);
   border-bottom-style: solid;
 }
@@ -44,17 +44,14 @@ aside{
     border-width: medium;
 }
 
-nav{
-    display: flex;
-    background-color: var(--tea-green);
-}
-
 footer{
     background: var(--coyote);
     color: var(--brilliant-rose);
     height: 50px;
     text-align: center;
-    position:absolute;
+    position:fixed;
+    bottom:0;
+    width: 100%;
 }
 
 .login{
@@ -62,6 +59,10 @@ footer{
     width: 60%;
     padding: 10px;
     margin: 10px;
+}
+.nav-item{
+    display: flex;
+    background-color: var(--tea-green);
 }
 
 .beverage-card {

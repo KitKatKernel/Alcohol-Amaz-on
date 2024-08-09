@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Beverage, User } = require('../models');
+const { Beverage, User, Ingredient } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Render the homepage with all projects
@@ -33,7 +33,7 @@ router.get('/profile', withAuth, async (req, res) => {
     // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
-      include: [{ model: Beverage }],
+      include: [{ model: Beverage, Ingredient }],
     });
 
     const user = userData.get({ plain: true });

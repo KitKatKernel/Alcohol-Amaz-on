@@ -11,15 +11,15 @@ async function newFormHandler(event) {
   const response = await fetch(`/api/beverages/`, {
     method: 'POST',
     body: JSON.stringify({
-      name,
-      description,
-      ingredient
-    }),
+      name: name,
+      description: description, 
+      ingredient:ingredient}),
     headers: {
       'Content-Type': 'application/json',
     },
   
   });
+  console.log(name);
 
   if (response.ok) {
     document.location.replace('/');
@@ -49,7 +49,7 @@ function getDropDown() {
   
         const div = document.createElement('option');
          
-        div.setAttribute("id", ingredient.id)
+        div.setAttribute("value", ingredient.id)
         div.textContent = ingredient.name
          
         ingredientDrop.appendChild(div)
