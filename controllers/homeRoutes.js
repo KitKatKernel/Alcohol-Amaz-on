@@ -5,7 +5,9 @@ const withAuth = require('../utils/auth');
 // Render the homepage with all projects
 router.get('/', async (req, res) => {
   try {
-    const beverageData = await Beverage.findAll(); // Fetch all projects from the database
+    const beverageData = await Beverage.findAll({
+      include: [{ model: Ingredient }],
+    }); // Fetch all projects from the database
     const beverages = beverageData.map((project) => project.get({ plain: true })); // Serialize data
 
     res.render('home', {

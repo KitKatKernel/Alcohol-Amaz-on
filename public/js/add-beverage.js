@@ -13,7 +13,8 @@ async function newFormHandler(event) {
     body: JSON.stringify({
       name: name,
       description: description, 
-      ingredient:ingredient}),
+      ingredient:ingredient,
+    }),
     headers: {
       'Content-Type': 'application/json',
     },
