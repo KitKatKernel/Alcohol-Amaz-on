@@ -32,22 +32,24 @@ router.get('/login', (req, res) => {
 // Render the profile page
 router.get('/profile', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Beverage, Ingredient }],
-    });
+    // We're grabbing all the ingredients from the database here
+    const ingredientData = await Ingredient.findAll();
 
-    const user = userData.get({ plain: true });
+    // Turning Sequelize objects into plain JavaScript objects so Handlebars can understand them
+    const ingredients = ingredientData.map(ingredient => ingredient.get({ plain: true }));
 
+    // passing in the ingredients we fetched, along with sess info
     res.render('profile', {
-      ...user,
-      logged_in: true
+      ingredients, 
+      user: req.session.user, 
+      logged_in: req.session.logged_in, 
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
+
 
 // Render a single project's details
 router.get('/project/:id', async (req, res) => {
