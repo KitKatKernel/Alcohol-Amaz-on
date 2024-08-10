@@ -1,0 +1,14 @@
+<div class="container mt-5">
+  <h2>Reviews for {{beverage.name}}</h2>
+  <div class="list-group">
+    {{#each reviews}}
+      <div class="list-group-item">
+        <h4>{{this.name}}</h4> 
+        <p>{{this.review}}</p>
+      </div>
+    {{else}}
+      <p>No reviews available for this beverage.</p>
+    {{/each}}
+  </div>
+  <a href="/api/beverages/{{beverage.id}}" class="btn btn-primary mt-3">Back to Beverage</a>
+</div>

@@ -16,14 +16,21 @@ router.get('/', async (req, res) => {
 // Get single Review by ID
 router.get('/:id', async (req, res) => {
   try {
-    const review = await Review.findByPk(req.params.id, {
+    const reviewData = await Review.findByPk(req.params.id, {
       include: [{ model: User }, { model: Beverage }],
     });
-    if (!review) {
+    
+    if (!reviewData) {
       res.status(404).json({ message: 'No review found with this id!' });
       return;
     }
-    res.status(200).json(review);
+
+    const review = reviewData.get({ plain: true });
+    
+    res.render('reviews', {
+      review,
+      logged_in: req.session.logged_in,
+    });
   } catch (err) {
     res.status(500).json(err);
   }
