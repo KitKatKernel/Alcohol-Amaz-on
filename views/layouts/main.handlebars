@@ -11,6 +11,7 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
 <body>
+  {{!-- I was just playing around with the css using this header, we should take it out.  I like the colors atm --}}
   <header class="bg-primary text-white text-center py-3">
     <h1>Welcome to Amazin' Sip Shop</h1>
   </header>
@@ -23,15 +24,15 @@
           <li class="nav-item">
             <a class="nav-link" href="/">Home</a>
           </li>
-          {{#if loggedIn}}
+          {{!-- {{#if loggedIn}} --}}
             <li class="nav-item">
               <a class="nav-link" id="logout" href="#">Logout</a>
             </li>
-          {{else}}
+          {{!-- {{else}} --}}
             <li class="nav-item">
               <a class="nav-link" href="/login">Login</a>
             </li>
-          {{/if}}
+          {{!-- {{/if}} --}}
           <li class="nav-item">
             <a class="nav-link" href="/account">Account</a>
           </li>

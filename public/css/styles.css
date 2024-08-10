@@ -1,11 +1,60 @@
 :root {
- --cambridge-blue: #8da999ff;
- --coyote: #786f52ff;
- --brilliant-rose: #f15bb5ff;
- --sunglow: #ffc857ff;
- --tea-green: #bfffbcff;
- --light: #ebebeb;
- --border-radius: 0.3rem;
+    --cambridge-blue: #8da999ff;
+    --coyote: #786f52ff;
+    --brilliant-rose: #f15bb5ff;
+    --sunglow: #ffc857ff;
+    --tea-green: #bfffbcff;
+    --light: #ebebeb;
+    --light-dark: #d4d4d4;
+    --primary: #8da999ff; /* Default primary color */
+    --secondary: #f15bb5ff; /* Secondary color for headers */
+    --tertiary: #ffc857ff; /* Tertiary color for highlights */
+    --dark: #786f52ff; /* Dark color for text */
+    --border-radius: 0.3rem;
+
+    /* Gradients using all 5, kinda yuck */
+    --gradient-top: linear-gradient(0deg, var(--cambridge-blue), var(--coyote), var(--brilliant-rose), var(--sunglow), var(--tea-green));
+    --gradient-right: linear-gradient(90deg, var(--cambridge-blue), var(--coyote), var(--brilliant-rose), var(--sunglow), var(--tea-green));
+    --gradient-bottom: linear-gradient(180deg, var(--cambridge-blue), var(--coyote), var(--brilliant-rose), var(--sunglow), var(--tea-green));
+    --gradient-left: linear-gradient(270deg, var(--cambridge-blue), var(--coyote), var(--brilliant-rose), var(--sunglow), var(--tea-green));
+    --gradient-top-right: linear-gradient(45deg, var(--cambridge-blue), var(--coyote), var(--brilliant-rose), var(--sunglow), var(--tea-green));
+    --gradient-bottom-right: linear-gradient(135deg, var(--cambridge-blue), var(--coyote), var(--brilliant-rose), var(--sunglow), var(--tea-green));
+    --gradient-top-left: linear-gradient(225deg, var(--cambridge-blue), var(--coyote), var(--brilliant-rose), var(--sunglow), var(--tea-green));
+    --gradient-bottom-left: linear-gradient(315deg, var(--cambridge-blue), var(--coyote), var(--brilliant-rose), var(--sunglow), var(--tea-green));
+    --gradient-radial: radial-gradient(var(--cambridge-blue), var(--coyote), var(--brilliant-rose), var(--sunglow), var(--tea-green));
+
+    /* pair gradients */
+    --gradient-cambridge-coyote: linear-gradient(90deg, var(--cambridge-blue), var(--coyote));
+    --gradient-cambridge-brilliant: linear-gradient(90deg, var(--cambridge-blue), var(--brilliant-rose));
+    --gradient-cambridge-sunglow: linear-gradient(90deg, var(--cambridge-blue), var(--sunglow));
+    --gradient-cambridge-tea: linear-gradient(90deg, var(--cambridge-blue), var(--tea-green));
+    --gradient-coyote-brilliant: linear-gradient(90deg, var(--coyote), var(--brilliant-rose));
+    --gradient-coyote-sunglow: linear-gradient(90deg, var(--coyote), var(--sunglow));
+    --gradient-coyote-tea: linear-gradient(90deg, var(--coyote), var(--tea-green));
+    --gradient-brilliant-sunglow: linear-gradient(90deg, var(--brilliant-rose), var(--sunglow));
+    --gradient-brilliant-tea: linear-gradient(90deg, var(--brilliant-rose), var(--tea-green));
+    --gradient-sunglow-tea: linear-gradient(90deg, var(--sunglow), var(--tea-green));
+
+    /* triple gradients */
+    --gradient-cambridge-brilliant-sunglow-90deg: linear-gradient(90deg, var(--cambridge-blue), var(--brilliant-rose), var(--sunglow));
+    --gradient-cambridge-brilliant-sunglow-180deg: linear-gradient(180deg, var(--cambridge-blue), var(--brilliant-rose), var(--sunglow));
+    --gradient-cambridge-brilliant-sunglow-270deg: linear-gradient(270deg, var(--cambridge-blue), var(--brilliant-rose), var(--sunglow));
+    --gradient-cambridge-brilliant-sunglow-45deg: linear-gradient(45deg, var(--cambridge-blue), var(--brilliant-rose), var(--sunglow));
+    
+    --gradient-cambridge-brilliant-tea-90deg: linear-gradient(90deg, var(--cambridge-blue), var(--brilliant-rose), var(--tea-green));
+    --gradient-cambridge-brilliant-tea-180deg: linear-gradient(180deg, var(--cambridge-blue), var(--brilliant-rose), var(--tea-green));
+    --gradient-cambridge-brilliant-tea-270deg: linear-gradient(270deg, var(--cambridge-blue), var(--brilliant-rose), var(--tea-green));
+    --gradient-cambridge-brilliant-tea-45deg: linear-gradient(45deg, var(--cambridge-blue), var(--brilliant-rose), var(--tea-green));
+    
+    --gradient-cambridge-sunglow-tea-90deg: linear-gradient(90deg, var(--cambridge-blue), var(--sunglow), var(--tea-green));
+    --gradient-cambridge-sunglow-tea-180deg: linear-gradient(180deg, var(--cambridge-blue), var(--sunglow), var(--tea-green));
+    --gradient-cambridge-sunglow-tea-270deg: linear-gradient(270deg, var(--cambridge-blue), var(--sunglow), var(--tea-green));
+    --gradient-cambridge-sunglow-tea-45deg: linear-gradient(45deg, var(--cambridge-blue), var(--sunglow), var(--tea-green));
+    
+    --gradient-brilliant-sunglow-tea-90deg: linear-gradient(90deg, var(--brilliant-rose), var(--sunglow), var(--tea-green));
+    --gradient-brilliant-sunglow-tea-180deg: linear-gradient(180deg, var(--brilliant-rose), var(--sunglow), var(--tea-green));
+    --gradient-brilliant-sunglow-tea-270deg: linear-gradient(270deg, var(--brilliant-rose), var(--sunglow), var(--tea-green));
+    --gradient-brilliant-sunglow-tea-45deg: linear-gradient(45deg, var(--brilliant-rose), var(--sunglow), var(--tea-green));
 }
 
 body {
@@ -20,11 +69,26 @@ body {
 
 header {
     padding: 40px;
-  text-align: center;
-  background-color: var(--coyote);
-  color: var(--brilliant-rose);
-  border-bottom-style: solid;
+    text-align: center;
+    background-image: var(--gradient-cambridge-brilliant-sunglow-45deg);
+    color: var(--brilliant-rose);
+    position: relative; /* I need this for the ::after element */
+    border-bottom-style: solid;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
 }
+
+header::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gradient-cambridge-brilliant-tea-270deg); 
+    z-index: 1; 
+}
+
 
 main {
     display: flex;
@@ -32,35 +96,36 @@ main {
     flex-grow: 1;
 }
 
-aside{
+aside {
     background-color: var(--cambridge-blue);
     padding: 8px;
     text-align: left;
     color: var(--light);
     width: 30%;
     margin: 5px;
-    border: var(--coyote);
+    border-color: var(--coyote);
     border-style: dotted;
     border-width: medium;
 }
 
-footer{
+footer {
     background: var(--coyote);
     color: var(--brilliant-rose);
     height: 50px;
     text-align: center;
-    position:fixed;
-    bottom:0;
+    position: fixed;
+    bottom: 0;
     width: 100%;
 }
 
-.login{
+.login {
     background-color: var(--coyote);
     width: 60%;
     padding: 10px;
     margin: 10px;
 }
-.nav-item{
+
+.nav-item {
     display: flex;
     background-color: var(--tea-green);
 }
@@ -70,9 +135,8 @@ footer{
     width: 60%;
     padding: 10px;
     margin: 10px;
-    float:right;
-    clear:both;
-
+    float: right;
+    clear: both;
 }
 
 .card-header {
@@ -101,11 +165,11 @@ footer{
     padding: 5px;
     text-align: center;
     background-color: var(--tertiary);
-  }
+}
 
-  .btn {
+.btn {
     font-size: 1.3rem;
-    text-decoration:none;
+    text-decoration: none;
     padding: 6px 5px;
     width: 100%;
     display: block;
@@ -117,11 +181,12 @@ footer{
     background-color: var(--light-dark);
     box-shadow: 3px 3px var(--dark);
     transform: translate(-1px, -1px);
-  }
-  
-   .btn:hover {
+}
+
+.btn:hover {
     color: var(--primary);
     background-color: var(--tertiary);
     transform: translate(0, 0);
     box-shadow: 2px 2px var(--dark);
-  }
+}
+

@@ -12,7 +12,9 @@ router.post('/register', async (req, res) => {
     req.session.save(() => {
       req.session.user_id = newUser.id;
       req.session.logged_in = true;
-      res.status(200).json(newUser);
+
+      // Redirect to the home page for now
+      res.redirect('/'); // Maybe the user page later, but I'll need to set it up, something like ('/account');
     });
   } catch (err) {
     res.status(400).json(err);
