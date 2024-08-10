@@ -18,13 +18,21 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const beverage = await Beverage.findByPk(req.params.id, {
-      include: [{ model: Ingredient }, { model: Review }],
+      include: [
+        { model: Ingredient },
+        { model: Review },
+      ],
     });
+
     if (!beverage) {
       res.status(404).json({ message: 'No beverage found with this id!' });
       return;
     }
-    res.status(200).json(beverage);
+
+    res.render('beverage', {
+      beverage: beverage.get({ plain: true }), // Pass the beverage data as a plain object
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     res.status(500).json(err);
   }
