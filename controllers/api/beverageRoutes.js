@@ -42,7 +42,9 @@ router.get('/:id', async (req, res) => {
 router.post('/', withAuth, async (req, res) => {
   try {
     const newBeverage = await Beverage.create({
-      ...req.body,
+      name: req.body.name,
+      description: req.body.description,
+      ingredient_id: req.body.ingredient,
       user_id: req.session.user_id,
   });
     res.status(200).json(newBeverage);
