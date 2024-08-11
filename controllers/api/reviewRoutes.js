@@ -13,22 +13,21 @@ router.get('/', async (req, res) => {
   }
 });
 
-// Get single Review by ID
-router.get('/:id', async (req, res) => {
+// Get Reviews by Beverage ID
+router.get('/beverage/:beverage_id', async (req, res) => {
   try {
-    const reviewData = await Review.findByPk(req.params.id, {
+    const reviews = await Review.findAll({
+      where: { beverage_id: req.params.beverage_id },
       include: [{ model: User }, { model: Beverage }],
     });
-    
-    if (!reviewData) {
-      res.status(404).json({ message: 'No review found with this id!' });
+
+    if (reviews.length === 0) {
+      res.status(404).json({ message: 'No reviews found for this beverage!' });
       return;
     }
 
-    const review = reviewData.get({ plain: true });
-    
     res.render('reviews', {
-      review,
+      reviews,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -36,9 +35,32 @@ router.get('/:id', async (req, res) => {
   }
 });
 
+// // Get single Review by ID
+// router.get('/:id', async (req, res) => {
+//   try {
+//     const reviewData = await Review.findByPk(req.params.id, {
+//       include: [{ model: User }, { model: Beverage }],
+//     });
+    
+//     if (!reviewData) {
+//       res.status(404).json({ message: 'No review found with this id!' });
+//       return;
+//     }
+
+//     const review = reviewData.get({ plain: true });
+    
+//     res.render('review', {
+//       review,
+//       logged_in: req.session.logged_in,
+//     });
+//   } catch (err) {
+//     res.status(500).json(err);
+//   }
+// });
+
 // Create new Review
 router.post('/', async (req, res) => {
-  try {1
+  try {
     const newReview = await Review.create({
       ...req.body,
       user_id: req.session.user_id,
