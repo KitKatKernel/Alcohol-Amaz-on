@@ -49,16 +49,63 @@ router.get('/profile', withAuth, async (req, res) => {
   }
 });
 
+// Render the cart page
+router.get('/cart', withAuth, (req, res) => {
+  const cart = req.session.cart || []; // Get the cart from the session, or an empty array if not present
+  res.render('cart', {
+    cart, // Pass cart data to the template
+    logged_in: req.session.logged_in, // Pass login status to the template
+  });
+});
 
+// Add a beverage to the cart
+router.post('/cart', withAuth, async (req, res) => {
+  const { beverageId } = req.body; // Extract the beverageId from the request body
 
-// Render a single project's details
-router.get('/project/:id', async (req, res) => {
   try {
-    const projectData = await Project.findByPk(req.params.id); // Fetch project by ID
-    const project = projectData.get({ plain: true }); // Serialize data
+    // Fetch the beverage by ID
+    const beverage = await Beverage.findByPk(beverageId, {
+      include: [{ model: Ingredient }],
+    });
 
-    res.render('project', {
-      project, // Pass project data to the template
+    if (!beverage) {
+      res.status(404).json({ message: 'Beverage not found' }); // Send error if the beverage isn't found
+      return;
+    }
+
+    // Create a cart item
+    const cartItem = {
+      id: beverage.id,
+      name: beverage.name,
+      description: beverage.description,
+      ingredients: beverage.ingredients.map(ing => ing.name),
+    };
+
+    // Initialize the cart in the session if it doesn't exist
+    if (!req.session.cart) {
+      req.session.cart = [];
+    }
+
+    // Add the item to the cart
+    req.session.cart.push(cartItem);
+    res.status(200).json({ message: 'Item added to cart', cart: req.session.cart });
+  } catch (err) {
+    res.status(500).json(err); // Send error response if something goes wrong
+  }
+});
+
+// Render a single beverage's details
+router.get('/beverage/:id', async (req, res) => {
+  try {
+    // Fetch the beverage by ID
+    const beverageData = await Beverage.findByPk(req.params.id, {
+      include: [{ model: Ingredient }],
+    });
+    const beverage = beverageData.get({ plain: true }); // Serialize data
+
+    // Render the beverage.handlebars template and pass the beverage data
+    res.render('beverage', {
+      beverage, 
       logged_in: req.session.logged_in // Pass login status to the template
     });
   } catch (err) {
