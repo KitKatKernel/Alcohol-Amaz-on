@@ -24,20 +24,23 @@
           <li class="nav-item">
             <a class="nav-link" href="/">Home</a>
           </li>
-          {{!-- {{#if loggedIn}} --}}
+          {{#if logged_in}}
             <li class="nav-item">
               <a class="nav-link" id="logout" href="#">Logout</a>
             </li>
-          {{!-- {{else}} --}}
+          {{else}}
             <li class="nav-item">
               <a class="nav-link" href="/login">Login</a>
             </li>
-          {{!-- {{/if}} --}}
+          {{/if}}
           <li class="nav-item">
             <a class="nav-link" href="/account">Account</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/profile">Submit Recipe</a>
+            <a class="nav-link" href="/recipe">Submit Recipe</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/cart">Cart</a> 
           </li>
           <li class="nav-item">
             <form class="form-inline" action="/api/search" method="GET" onsubmit="return validateSearch()">
@@ -71,8 +74,8 @@
       <a href="about">About Us</a>
     </div>
   </footer>
-{{#if logged_in}}
-  <script src="/js/logout.js"></script>
+  {{#if logged_in}}
+    <script src="/js/logout.js"></script>
   {{/if}}
 </body>
 </html>

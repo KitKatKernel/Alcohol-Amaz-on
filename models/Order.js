@@ -1,23 +1,15 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Beverage extends Model {}
+class Order extends Model {}
 
-Beverage.init(
+Order.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
-    },
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-    },
-    description: {
-      type: DataTypes.STRING,
-      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -26,14 +18,27 @@ Beverage.init(
         key: 'id',
       },
     },
+    order_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+      defaultValue: DataTypes.NOW,
+    },
+    delivery_date: {
+      type: DataTypes.DATE,
+      allowNull: false,
+    },
+    beverages: {
+      type: DataTypes.JSONB,
+      allowNull: false,
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'beverage',
+    modelName: 'order',
   }
 );
 
-module.exports = Beverage;
+module.exports = Order;
