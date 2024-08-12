@@ -4,7 +4,7 @@
       <h2>{{beverage.name}}</h2>
     </div>
     <div class="card-body d-flex">
-      <!-- Image place holder here -->
+      <!-- Image placeholder here -->
       <div class="beverage-image-container" style="width: 33%;"> 
         <img src="{{beverage.imageUrl}}" alt="{{beverage.name}}" class="img-fluid">
       </div>
@@ -26,7 +26,28 @@
 </div>
 
 <script>
-  document.getElementById('oneClickBuy').addEventListener('click', function() {
-    alert('We need this feature to meet the MVP, get cracking!');
+  // Adding an event listener to the "One Click Buy" button
+  document.getElementById('oneClickBuy').addEventListener('click', async function() {
+    const beverageId = {{beverage.id}}; // We need this beverage ID to identify which drink's ingredients we're grabbing
+
+    try {
+      // Sending a POST request with the beverage ID
+      const response = await fetch('/cart', {
+        method: 'POST',
+        body: JSON.stringify({ beverageId }),
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      if (response.ok) {
+        // Notify the user that the ingredients were added to the cart
+        alert('Ingredients added to cart!');
+      } else {
+        alert('Failed to add to cart.');
+      }
+    } catch (err) {
+      // Log the error and notify the user if something went wrong
+      console.error(err);
+      alert('Something went wrong.');
+    }
   });
 </script>

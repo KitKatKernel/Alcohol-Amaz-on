@@ -1,17 +1,17 @@
 const router = require('express').Router();
-const { Beverage, User, Ingredient } = require('../models');
+const { Beverage, Ingredient } = require('../models');
 const withAuth = require('../utils/auth');
 
-// Render the homepage with all projects
+// Render the homepage with all beverages
 router.get('/', async (req, res) => {
   try {
     const beverageData = await Beverage.findAll({
       include: [{ model: Ingredient }],
-    }); // Fetch all projects from the database
-    const beverages = beverageData.map((project) => project.get({ plain: true })); // Serialize data
+    }); // Fetch all beverages from the database
+    const beverages = beverageData.map((beverage) => beverage.get({ plain: true })); // Serialize data
 
     res.render('home', {
-      beverages, // Pass projects data to the template
+      beverages, // Pass beverages data to the template
       logged_in: req.session.logged_in // Pass login status to the template
     });
   } catch (err) {
@@ -32,13 +32,11 @@ router.get('/login', (req, res) => {
 // Render the profile page
 router.get('/profile', withAuth, async (req, res) => {
   try {
-    // We're grabbing all the ingredients from the database here
+    // Fetch all ingredients from the database
     const ingredientData = await Ingredient.findAll();
+    const ingredients = ingredientData.map(ingredient => ingredient.get({ plain: true })); // Serialize data
 
-    // Turning Sequelize objects into plain JavaScript objects so Handlebars can understand them
-    const ingredients = ingredientData.map(ingredient => ingredient.get({ plain: true }));
-
-    // passing in the ingredients we fetched, along with sess info
+    // Render the profile page with the ingredients
     res.render('profile', {
       ingredients, 
       user: req.session.user, 
@@ -58,46 +56,40 @@ router.get('/cart', withAuth, (req, res) => {
   });
 });
 
-// Add a beverage to the cart
+// Add ingredients of a beverage to the cart
 router.post('/cart', withAuth, async (req, res) => {
-  const { beverageId } = req.body; // Extract the beverageId from the request body
+  const { beverageId } = req.body;
 
   try {
-    // Fetch the beverage by ID
     const beverage = await Beverage.findByPk(beverageId, {
       include: [{ model: Ingredient }],
     });
 
     if (!beverage) {
-      res.status(404).json({ message: 'Beverage not found' }); // Send error if the beverage isn't found
+      res.status(404).json({ message: 'Beverage not found' });
       return;
     }
 
-    // Create a cart item
-    const cartItem = {
-      id: beverage.id,
-      name: beverage.name,
-      description: beverage.description,
-      ingredients: beverage.ingredients.map(ing => ing.name),
-    };
+    const cartItems = beverage.ingredients.map(ingredient => ({
+      id: ingredient.id,
+      name: ingredient.name,
+    }));
 
-    // Initialize the cart in the session if it doesn't exist
     if (!req.session.cart) {
       req.session.cart = [];
     }
 
-    // Add the item to the cart
-    req.session.cart.push(cartItem);
-    res.status(200).json({ message: 'Item added to cart', cart: req.session.cart });
+    req.session.cart.push(...cartItems);
+    res.status(200).json({ message: 'Ingredients added to cart', cart: req.session.cart });
   } catch (err) {
-    res.status(500).json(err); // Send error response if something goes wrong
+    res.status(500).json(err);
   }
 });
 
 // Render a single beverage's details
 router.get('/beverage/:id', async (req, res) => {
   try {
-    // Fetch the beverage by ID
+    // Fetch the beverage by ID including its ingredients
     const beverageData = await Beverage.findByPk(req.params.id, {
       include: [{ model: Ingredient }],
     });
