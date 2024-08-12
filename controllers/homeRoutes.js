@@ -136,4 +136,19 @@ router.get('/beverage/:id', async (req, res) => {
   }
 });
 
+// Render the review submission page
+router.get('/reviews/submit/:id', withAuth, async (req, res) => {
+  try {
+    const beverageData = await Beverage.findByPk(req.params.id);
+    const beverage = beverageData.get({ plain: true });
+
+    res.render('submitReview', {
+      beverage,
+      logged_in: req.session.logged_in,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

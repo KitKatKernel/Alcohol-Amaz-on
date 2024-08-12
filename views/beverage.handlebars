@@ -2,6 +2,7 @@
   <div class="card beverage-card">
     <div class="card-header text-center">
       <h2>{{beverage.name}}</h2>
+      <p>Average Rating: {{beverage.averageRating}}</p>
     </div>
     <div class="card-body d-flex">
       <!-- Image placeholder here -->
@@ -20,6 +21,7 @@
         </ul>
         <a href="/api/reviews/beverage/{{beverage.id}}" class="btn btn-secondary mt-3">See Reviews</a>
         <button class="btn btn-primary mt-3" id="oneClickBuy">One Click Buy</button>
+        <a href="/reviews/submit/{{beverage.id}}" class="btn btn-primary mt-3">Submit a Review</a>
       </div>
     </div>
   </div>

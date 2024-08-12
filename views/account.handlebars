@@ -29,4 +29,19 @@
   {{else}}
     <p>You have not submitted any recipes.</p>
   {{/if}}
+
+  <h3>Your Reviews</h3>
+  {{#if reviews.length}}
+    <ul class="list-group">
+      {{#each reviews}}
+        <li class="list-group-item">
+          <p><strong>Beverage:</strong> {{this.beverage.name}}</p>
+          <p><strong>Rating:</strong> {{this.rating}}</p>
+          <p><strong>Comment:</strong> {{this.comment}}</p>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>You have not submitted any reviews.</p>
+  {{/if}}
 </div>

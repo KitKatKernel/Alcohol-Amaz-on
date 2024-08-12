@@ -35,29 +35,6 @@ router.get('/beverage/:beverage_id', async (req, res) => {
   }
 });
 
-// // Get single Review by ID
-// router.get('/:id', async (req, res) => {
-//   try {
-//     const reviewData = await Review.findByPk(req.params.id, {
-//       include: [{ model: User }, { model: Beverage }],
-//     });
-    
-//     if (!reviewData) {
-//       res.status(404).json({ message: 'No review found with this id!' });
-//       return;
-//     }
-
-//     const review = reviewData.get({ plain: true });
-    
-//     res.render('review', {
-//       review,
-//       logged_in: req.session.logged_in,
-//     });
-//   } catch (err) {
-//     res.status(500).json(err);
-//   }
-// });
-
 // Create new Review
 router.post('/', async (req, res) => {
   try {

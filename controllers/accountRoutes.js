@@ -1,8 +1,8 @@
 const router = require('express').Router();
-const { User, Order, Beverage } = require('../models');
+const { User, Order, Beverage, Review } = require('../models');
 const withAuth = require('../utils/auth');
 
-// Render the account page with user's orders and submitted recipes
+// Render the account page with user's orders, submitted recipes, and reviews
 router.get('/', withAuth, async (req, res) => {
   try {
     const userId = req.session.user_id;
@@ -19,11 +19,18 @@ router.get('/', withAuth, async (req, res) => {
       where: { user_id: userId },
     });
     const beverages = beverageData.map(beverage => beverage.get({ plain: true }));
-    console.log('Beverages:', beverages); // Debugging log 2
+
+    // Fetch the user's submitted reviews
+    const reviewData = await Review.findAll({
+      where: { user_id: userId },
+      include: [{ model: Beverage, attributes: ['name'] }],
+    });
+    const reviews = reviewData.map(review => review.get({ plain: true }));
 
     res.render('account', {
       orders,
       beverages,
+      reviews,
       logged_in: req.session.logged_in,
     });
   } catch (err) {

@@ -22,10 +22,15 @@ const sess = {
 app.use(session(sess));
 
 const hbs = exphbs.create({
-  // OVerriding handlebars security that prevents access to properties that are not “own properties”.
+  // Overriding handlebars security that prevents access to properties that are not “own properties”.
   runtimeOptions: {
     allowProtoPropertiesByDefault: true,
     allowProtoMethodsByDefault: true,
+  },
+  helpers: {
+    // Helper function to slice an array from the specified start index to the end index.
+    // Useful for limiting or paginating content within Handlebars templates.
+    slice: (array, start, end) => array.slice(start, end),
   },
 });
 
