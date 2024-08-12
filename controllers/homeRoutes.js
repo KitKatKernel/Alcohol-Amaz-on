@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Beverage, Ingredient } = require('../models');
+const { Beverage, Ingredient, Order } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Render the homepage with all beverages
@@ -22,22 +22,22 @@ router.get('/', async (req, res) => {
 // Render the login page
 router.get('/login', (req, res) => {
   if (req.session.logged_in) {
-    res.redirect('/'); // Redirect to profile if already logged in
+    res.redirect('/'); // Redirect to home if already logged in
     return;
   }
 
   res.render('login'); // Render the login template
 });
 
-// Render the profile page
-router.get('/profile', withAuth, async (req, res) => {
+// Render the recipe page
+router.get('/recipe', withAuth, async (req, res) => {
   try {
     // Fetch all ingredients from the database
     const ingredientData = await Ingredient.findAll();
     const ingredients = ingredientData.map(ingredient => ingredient.get({ plain: true })); // Serialize data
 
-    // Render the profile page with the ingredients
-    res.render('profile', {
+    // Render the recipe page with the ingredients
+    res.render('recipe', {
       ingredients, 
       user: req.session.user, 
       logged_in: req.session.logged_in, 
@@ -51,7 +51,11 @@ router.get('/profile', withAuth, async (req, res) => {
 router.get('/cart', withAuth, (req, res) => {
   const cart = req.session.cart || []; // Get the cart from the session, or an empty array if not present
   cart.forEach(item => {
-    item.ingredientsList = item.ingredients.map(ingredient => ingredient.name).join(', ');
+    if (item.ingredients) {
+      item.ingredientsList = item.ingredients.map(ingredient => ingredient.name).join(', ');
+    } else {
+      item.ingredientsList = '';
+    }
   });
   res.render('cart', {
     cart, // Pass cart data to the template
@@ -84,6 +88,26 @@ router.post('/cart', withAuth, async (req, res) => {
 
     req.session.cart.push(...cartItems);
     res.status(200).json({ message: 'Ingredients added to cart', cart: req.session.cart });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+// Place an order
+router.post('/order', withAuth, async (req, res) => {
+  try {
+    const userId = req.session.user_id;
+    const orderDate = new Date();
+    const deliveryDate = new Date(orderDate);
+    deliveryDate.setDate(orderDate.getDate() + 3); // Add 3 days to the current date
+
+    const newOrder = await Order.create({
+      user_id: userId,
+      order_date: orderDate,
+      delivery_date: deliveryDate,
+    });
+
+    res.status(200).json({ message: `Your order is being processed and the estimated delivery time is ${deliveryDate.toDateString()}.`, order: newOrder });
   } catch (err) {
     res.status(500).json(err);
   }
