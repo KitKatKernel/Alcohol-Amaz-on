@@ -22,14 +22,6 @@ Beverage.init(
       type: DataTypes.TEXT,
       allowNull: false,
     },
-    // Foreign key referencing Ingredient model's ingredient ID.
-    ingredient_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'ingredient',
-        key: 'id',
-      },
-    },
   },
   {
     sequelize,

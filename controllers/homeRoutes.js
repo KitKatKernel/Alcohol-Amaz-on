@@ -50,6 +50,9 @@ router.get('/profile', withAuth, async (req, res) => {
 // Render the cart page
 router.get('/cart', withAuth, (req, res) => {
   const cart = req.session.cart || []; // Get the cart from the session, or an empty array if not present
+  cart.forEach(item => {
+    item.ingredientsList = item.ingredients.map(ingredient => ingredient.name).join(', ');
+  });
   res.render('cart', {
     cart, // Pass cart data to the template
     logged_in: req.session.logged_in, // Pass login status to the template
