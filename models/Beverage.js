@@ -5,22 +5,26 @@ class Beverage extends Model {}
 
 Beverage.init(
   {
-    // Beverage ID: Primary key, auto-incremented
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    // Beverage name
     name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    // Beverage description
     description: {
-      type: DataTypes.TEXT,
-      allowNull: false,
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'user',
+        key: 'id',
+      },
     },
   },
   {

@@ -1,0 +1,32 @@
+<div class="container mt-5">
+  <h2>Your Account</h2>
+  
+  <h3>Your Orders</h3>
+  {{#if orders.length}}
+    <ul class="list-group">
+      {{#each orders}}
+        <li class="list-group-item">
+          <p><strong>Order Date:</strong> {{this.order_date}}</p>
+          <p><strong>Estimated Delivery Date:</strong> {{this.delivery_date}}</p>
+          <p><strong>Beverages:</strong> {{#each this.beverages}} {{this.name}}, {{/each}}</p>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>You have no orders.</p>
+  {{/if}}
+
+  <h3>Your Submitted Recipes</h3>
+  {{#if beverages.length}}
+    <ul class="list-group">
+      {{#each beverages}}
+        <li class="list-group-item">
+          <h4>{{this.name}}</h4>
+          <p>{{this.description}}</p>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>You have not submitted any recipes.</p>
+  {{/if}}
+</div>
