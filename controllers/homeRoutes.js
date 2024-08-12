@@ -105,7 +105,11 @@ router.post('/order', withAuth, async (req, res) => {
       user_id: userId,
       order_date: orderDate,
       delivery_date: deliveryDate,
+      beverages: req.session.cart,
     });
+
+    // Empty the cart after placing the order
+    req.session.cart = [];
 
     res.status(200).json({ message: `Your order is being processed and the estimated delivery time is ${deliveryDate.toDateString()}.`, order: newOrder });
   } catch (err) {

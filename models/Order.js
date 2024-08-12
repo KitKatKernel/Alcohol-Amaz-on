@@ -27,6 +27,10 @@ Order.init(
       type: DataTypes.DATE,
       allowNull: false,
     },
+    beverages: {
+      type: DataTypes.JSONB,
+      allowNull: false,
+    },
   },
   {
     sequelize,

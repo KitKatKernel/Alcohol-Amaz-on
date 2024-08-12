@@ -28,6 +28,8 @@
       if (response.ok) {
         const data = await response.json();
         alert(data.message);
+        document.querySelector('.list-group').innerHTML = '';
+        document.querySelector('.container').innerHTML += '<p>Your cart is empty.</p>';
       } else {
         alert('Failed to place order.');
       }
