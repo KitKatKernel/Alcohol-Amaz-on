@@ -1,10 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// Create Project model and datatypes, including the user_id foreign key.
-class Project extends Model {}
+class Beverage extends Model {}
 
-Project.init(
+Beverage.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -18,15 +17,7 @@ Project.init(
     },
     description: {
       type: DataTypes.STRING,
-    },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    needed_funding: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
+      allowNull: true,
     },
     user_id: {
       type: DataTypes.INTEGER,
@@ -35,14 +26,24 @@ Project.init(
         key: 'id',
       },
     },
+    img_url: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'beverage',
   }
 );
 
-module.exports = Project;
+Beverage.prototype.getAverageRating = async function() {
+  const reviews = await this.getReviews();
+  const totalRating = reviews.reduce((sum, review) => sum + review.rating, 0);
+  return totalRating / reviews.length;
+};
+
+module.exports = Beverage;

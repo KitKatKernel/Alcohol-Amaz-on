@@ -1,0 +1,39 @@
+<h1>Welcome {{name}}</h1>
+
+<br/>
+<h2>Create a Recipe</h2>
+<form class="addBeverage" action="/api/beverages" method="POST">
+  <label>Drink Name</label>
+  <input type="text" id="beverage_name" name="beverage_name" placeholder="Tasty Drink" required>
+  <label>Drink Instructions</label>
+  <textarea type="text" id="description" name="description" placeholder="Description" required></textarea>
+  <label>Ingredients</label>
+  <select id="ingredientDrop">
+    {{#each ingredients}}
+      <option value="{{this.id}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+  <label>Parts</label>
+  <input type="number" id="ingredientParts" name="ingredientParts" min="1" required>
+  <button type="button" id="addIngredient">Add Ingredient</button>
+  <ul id="ingredientList"></ul>
+  <button type="submit">Create</button>
+</form>
+
+{{#if beverages.length}}
+  <div class="col-md-6 project-list">
+    <h3>Current Projects:</h3>
+    {{#each beverages as |beverage|}}
+    <div class="row mb-2">
+      <div class="col-md-8">
+        <h4><a href="/project/{{beverage.id}}">{{beverage.name}}</a></h4>
+      </div>
+      <div class="col-md-4">
+        <button class="btn btn-sm btn-danger" data-id="{{beverage.id}}">DELETE</button>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+{{/if}}
+
+<script src="/js/add-beverage.js"></script>

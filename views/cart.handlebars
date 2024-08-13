@@ -1,0 +1,41 @@
+<div class="container mt-5">
+  <h2>Your Cart</h2>
+  {{#if cart.length}}
+    <ul class="list-group">
+      {{#each cart}}
+        <li class="list-group-item">
+          <h4>{{this.name}}</h4>
+          <p>{{this.description}}</p>
+          <p>{{this.ingredientsList}}</p>
+        </li>
+      {{/each}}
+    </ul>
+    <button class="btn btn-primary mt-3" id="placeOrder">Place your order</button>
+  {{else}}
+    <p>Your cart is empty.</p>
+  {{/if}}
+  <a href="/" class="btn btn-primary mt-3">Continue Shopping</a>
+</div>
+
+<script>
+  document.getElementById('placeOrder').addEventListener('click', async function() {
+    try {
+      const response = await fetch('/order', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+        alert(data.message);
+        document.querySelector('.list-group').innerHTML = '';
+        document.querySelector('.container').innerHTML += '<p>Your cart is empty.</p>';
+      } else {
+        alert('Failed to place order.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Something went wrong.');
+    }
+  });
+</script>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazin' Sip Shop</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/public/css/styles.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <header class="bg-primary text-white text-center py-3">
+    <h1>Welcome to Amazin' Sip Shop</h1>
+  </header>
+  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="/">Amazin' Sip Shop</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          {{#if loggedIn}}
+            <li class="nav-item">
+              <a class="nav-link" id="logout" href="#">Logout</a>
+            </li>
+          {{else}}
+            <li class="nav-item">
+              <a class="nav-link" href="/login">Login</a>
+            </li>
+          {{/if}}
+          <li class="nav-item">
+            <a class="nav-link" href="/account">Account</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/submit-recipe">Submit Recipe</a>
+          </li>
+          <li class="nav-item">
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search Recipes" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container mt-4">
+   
+
+  <h2>Create a Recipe</h2>
+  <form action="/api/beverageroutes" method="POST">
+    <input type="text" name="beverage_name" placeholder="Beverage Name" required>
+    <input type="text" name="description" placeholder="Description" required>
+    <select id="ingredientDrop" multiple>
+      <option>Select Ingredient</option>
+    </select>
+    <button type="submit">Create</button>
+  </form>
+  <form action="/api/users/logout" method="POST">
+    <button type="submit">Logout</button>
+  </form>
+
+  </div>
+
+  <footer class="bg-light text-center py-3 mt-4">
+    <div class="container">
+      <a href="repo">Git Repository</a>
+      <a href="email">Contact Us</a>
+      <a href="about">About Us</a>
+    </div>
+  </footer>
+
+</body>
+<script src="../public/js/add-beverage.js"></script>
+</html>

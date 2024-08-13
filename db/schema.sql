@@ -1,2 +1,3 @@
-DROP DATABASE IF EXISTS crowdfund_db;
-CREATE DATABASE crowdfund_db;
+--Drop/Create DB
+DROP DATABASE IF EXISTS ass_db;
+CREATE DATABASE ass_db;

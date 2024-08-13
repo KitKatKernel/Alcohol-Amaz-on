@@ -1,0 +1,252 @@
+[
+  {
+    "name": "Mojito",
+    "description": "A refreshing cocktail made with rum, lime, mint, and soda water.",
+    "img_url": "https://assets.surlatable.com/m/3f05072e6a5e4d6b/72_dpi_webp-REC-513717-Mojito.jpg"
+  },
+  {
+    "name": "Pina Colada",
+    "description": "A sweet cocktail made with rum, coconut cream, and pineapple juice.",
+    "img_url": "https://www.liquor.com/thmb/DBqU37WdOMZCcoXVud3Wd1tzPlU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Frozen-Pina-Colada-1500x1500-hero-aac506d60d9647f78171bbe4ddc126ed.jpg"
+  },
+  {
+    "name": "Margarita",
+    "description": "A classic cocktail made with tequila, lime juice, and Cointreau.",
+    "img_url": "https://www.liquor.com/thmb/JQgDGy26Zsw-_cFGKH4zNH9PlXk=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Frozen-Margarita-1500x1500-hero-191e49b3ab4f4781b93f3cfacac25136.jpg"
+  },
+  {
+    "name": "Martini",
+    "description": "A classic cocktail made with gin and dry vermouth, garnished with an olive or lemon twist.",
+    "img_url": "https://www.liquor.com/thmb/FtK86O9W4_pRq1Y3gc1iJerTGP8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vodka-martini-1500x1500-hero-080af5bb8ff04851a9c0ecf77a88a818.jpg"
+  },
+  {
+    "name": "Old Fashioned",
+    "description": "A simple blend of bourbon, sugar, bitters, and a twist of citrus rind.",
+    "img_url": "https://www.allrecipes.com/thmb/DQIEfVzC7KndUnnHJbmB44a0u3Y=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/221320-old-fashioned-cocktail-ddmfs-3X4-13181414-bf1365252476463b9650096c28b5acfd.jpg"
+  },
+  {
+    "name": "Daiquiri",
+    "description": "A sweet and sour mix of rum, lime juice, and simple syrup.",
+    "img_url": "https://www.liquor.com/thmb/OsMg1KCwqkCw805KcKDFkkfan44=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Frozen-Daiquiri-1500x1500-hero-ee5a125ec0d04488a52a32db6278f3da.jpg"
+  },
+  {
+    "name": "Manhattan",
+    "description": "A sophisticated mix of rye whiskey, sweet vermouth, and bitters, garnished with a cherry.",
+    "img_url": "https://www.liquor.com/thmb/DR2UAsRlu-YCVn9r_iLJCmOvzlg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/manhattan-4000x4000-primary-ig-9c3d894510284e9d8fbd9c518d00790b.jpg"
+  },
+  {
+    "name": "Negroni",
+    "description": "An Italian favorite made with gin, campari, and sweet vermouth.",
+    "img_url": "https://www.liquor.com/thmb/KPTRXSVO7vyx7O2fPyNkLh9JQPo=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/mezcal-negroni-1500x1500-primary-6f6c472050a949c8a55aa07e1b5a2d1b.jpg"
+  },
+  {
+    "name": "Moscow Mule",
+    "description": "A spicy, refreshing mix of vodka, ginger beer, and lime juice.",
+    "img_url": "https://www.liquor.com/thmb/G5R_Y6cS-voBV1hYqI2mtoovoTQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/moscow-mule-4000x4000-primary-ig-3a364d63e57b4a9b8cf82ec1dc54eb30.jpg"
+  },
+  {
+    "name": "Cosmopolitan",
+    "description": "A chic blend of vodka, triple sec, cranberry juice, and lime juice.",
+    "img_url": "https://static1.squarespace.com/static/5dd2d1f293c11000555773dd/t/62192021601596548e2a86c1/1645814268147/Copy+of+EOD026+%281%29.JPG?format=1500w"
+  },
+  {
+    "name": "Bloody Mary",
+    "description": "A savory cocktail made with vodka, tomato juice, and various spices and flavorings.",
+    "img_url": "https://www.liquor.com/thmb/kvzllkWRv-mOjXXMcF0Bcuc4sRQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Bloody-Mary-Classic_Tim_Nusog_4000x4000_primary-68db8a83de544d8ba566accfa13a55e4.jpg"
+  },
+  {
+    "name": "Whiskey Sour",
+    "description": "A tangy mix of whiskey, lemon juice, and simple syrup.",
+    "img_url": "https://www.liquor.com/thmb/Oa3KjaP_udh0TYQO9ckm0dPS5PA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/whiskey-sour-1500x1500-hero-c9df509bb1d141f1a8424051c3d78445.jpg"
+  },
+  {
+    "name": "Tom Collins",
+    "description": "A refreshing mix of gin, lemon juice, sugar, and soda water.",
+    "img_url": "https://www.liquor.com/thmb/WfWXl212HDQhTHJX_LphwlZFX4c=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/LQR-tomcollins-original-4000x4000-680e282529a34b30ac4b8ed495168109.jpg"
+  },
+  {
+    "name": "Mai Tai",
+    "description": "A Polynesian-style cocktail made with rum, lime juice, orgeat syrup, and orange liqueur.",
+    "img_url": "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FRecipes%2F2024-07-mai-tai%2Fmai-tai-288-vertical"
+  },
+  {
+    "name": "Gimlet",
+    "description": "A simple, refreshing mix of gin and lime juice.",
+    "img_url": "https://www.liquor.com/thmb/mi0oeRqiuSED3lwQOOWgjZY493s=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Gimlet-1500x1500-hero-7af9450103b9437d8d5b7206a6ddfe43.jpg"
+  },
+  {
+    "name": "Mint Julep",
+    "description": "A Southern classic made with bourbon, mint, sugar, and water.",
+    "img_url": "https://static1.squarespace.com/static/58c180edff7c50dd0e51a2ad/5c6ef776652deaf045469d5d/5cc2324515fcc07c57917ae1/1556230776184/IMG_8923.jpg?format=1500w"
+  },
+  {
+    "name": "Sazerac",
+    "description": "A New Orleans classic made with rye whiskey, absinthe, sugar, and Peychaud's bitters.",
+    "img_url": "https://www.liquor.com/thmb/Ob_GjDCNJE0a8rHE7YfUK8txAmg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/sazerac-1500x1500-hero-62326d995cdb4a79a6a0a3bd4a98cef9.jpg"
+  },
+  {
+    "name": "Singapore Sling",
+    "description": "A fruity mix of gin, cherry brandy, Benedictine, and fruit juices.",
+    "img_url": "https://www.liquor.com/thmb/m5fY-b1zxLMq6NffksIK4uqT8D4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Singapore_Sling_3000x3000_primary-5fd9e3d361204753919604d123ca23f2.jpg"
+  },
+  {
+    "name": "French 75",
+    "description": "A sparkling mix of gin, lemon juice, sugar, and Champagne.",
+    "img_url": "https://www.liquor.com/thmb/7d-vgxTQTx3tNPPVLq6LRdSsLec=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/french-75-4000x4000-primary-ig-861ae757fec64997a6136dbbf37da6f0.jpg"
+  },
+  {
+    "name": "Sidecar",
+    "description": "A tangy blend of cognac, triple sec, and lemon juice.",
+    "img_url": "https://www.lembitloungecuisine.com/wp-content/uploads/2023/06/ps-IMG_6467.jpg"
+  },
+  {
+    "name": "Amaretto Sour",
+    "description": "A sweet and sour mix of amaretto liqueur and lemon juice.",
+    "img_url": "https://www.liquor.com/thmb/1vw5Exyh10NJRQKQFmhIJmarRf0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/amaretto-sour-4000x4000-primary-ig-a49e20dfa0814f50bdaf3fd41e590a17.jpg"
+  },
+  {
+    "name": "Dark and Stormy",
+    "description": "A spicy, refreshing mix of dark rum and ginger beer.",
+    "img_url": "https://www.liquor.com/thmb/nSPe_3X-pnoLzAIiDYBoYiCCNGs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Dark_n_Stormy_Credit_Tim_Nusog_2500x2500_primary-57c1a6908c6d4da7a60dcaf66a342cc0.jpg"
+  },
+  {
+    "name": "Aperol Spritz",
+    "description": "A light, bubbly mix of Aperol, Prosecco, and soda water.",
+    "img_url": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2022_25/1881734/aperol-spritz-mc-1x1-220621.jpg"
+  },
+  {
+    "name": "Paloma",
+    "description": "A refreshing mix of tequila, grapefruit soda, and lime juice.",
+    "img_url": "https://www.liquor.com/thmb/cgPvWUC4HU7GgnWWObhmGNQL1bs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/paloma-1500x1500-hero-46383ed066d2400a8ddd7543261f36c2.jpg"
+  },
+  {
+    "name": "Caipirinha",
+    "description": "A Brazilian favorite made with cachaça, sugar, and lime.",
+    "img_url": "https://adelinasocialgoods.com/cdn/shop/articles/20240403222448-caipirinha.jpg?v=1712183309"
+  }, 
+  {
+    "name": "Vesper",
+    "description": "A sophisticated mix of gin, vodka, and Lillet Blanc, made famous by James Bond.",
+    "img_url": "https://www.liquor.com/thmb/JsgnFkX6igp5RqqMbnEEaGbySwg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/vesper-martini-1500x1500-hero-2d09a7378cd24d4eb97b1536cb604d7d.jpg"
+  },
+  {
+    "name": "Irish Coffee",
+    "description": "A warm blend of Irish whiskey, hot coffee, sugar, and whipped cream.",
+    "img_url": "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2Farchive%2Fa84cba9e15919d13761dd6dbdff13c3c9fe1779d"
+  },
+  {
+    "name": "Brandy Alexander",
+    "description": "A creamy mix of brandy, dark creme de cacao, and cream.",
+    "img_url": "https://www.liquor.com/thmb/TnDE_Hiu-kLyMwMTEs6DHa25iZ8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/brandy-alexander-4000x4000-primary-ig-76ee3d932fd24b7db207e4eaefb5ac08.jpg"
+  },
+  {
+    "name": "Pisco Sour",
+    "description": "A tangy mix of pisco, lime juice, simple syrup, egg white, and bitters.",
+    "img_url": "https://abeautifulmess.com/wp-content/uploads/2024/03/pisco-sour-drink-cocktail.jpg"
+  },
+  {
+    "name": "Blue Hurricane",
+    "description": "A vibrant, tropical mix of rum, blue curacao, pineapple juice, and lime juice.",
+    "img_url": "https://www.liquor.com/thmb/rRuiX7llkYB5XvBRPn1Rh37Wa1M=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/blue-hawaii-1500x1500-hero-1d77432ce500460f98caa29775805f1c.jpg"
+  },
+  {
+    "name": "Bellini",
+    "description": "A sparkling mix of Prosecco and peach puree.",
+    "img_url": "https://assets.surlatable.com/m/74bd0393d3cc7278/72_dpi_webp-slt_REC_283556_perfectly_peachy_bellini.jpg"
+  },
+  {
+    "name": "White Russian",
+    "description": "A creamy mix of vodka, coffee liqueur, and cream.",
+    "img_url": "https://abeautifulmess.com/wp-content/uploads/2023/12/White-Russian--scaled.jpg"
+  },
+  {
+    "name": "Black Russian",
+    "description": "A simple mix of vodka and coffee liqueur.",
+    "img_url": "https://www.liquor.com/thmb/bON2dAkE1B5NMtXT-opx3M4XLxc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/black-russian-4000x4000-primary-ig-267ec4b1cb664b0680c6a641dc68d77b.jpg"
+  },
+  {
+    "name": "Lemon Drop",
+    "description": "A sweet and sour mix of vodka, lemon juice, and simple syrup.",
+    "img_url": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2022_46/1935143/united-sides-of-thanksgiving-1x1-zz-221117-07.jpg"
+  },
+  {
+    "name": "Planter's Punch",
+    "description": "A fruity mix of dark rum, citrus juices, and grenadine.",
+    "img_url": "https://www.thespruceeats.com/thmb/A095W0XSZGGo7FD0zu9ymH5RgYg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/planterspunch-0dc84a1d6e854a64a936ad46bb87f1d8.jpg"
+  },
+  {
+    "name": "Ramos Gin Fizz",
+    "description": "A frothy blend of gin, lemon and lime juice, egg white, cream, and soda water.",
+    "img_url": "https://static1.squarespace.com/static/5bafc73934c4e20db5636a22/t/5f23853c65c1d4272e44248c/1596163407398/ramosfizz?format=1500w"
+  },
+  {
+    "name": "Clover Club",
+    "description": "A pre-Prohibition mix of gin, lemon juice, raspberry syrup, and egg white.",
+    "img_url": "https://images.squarespace-cdn.com/content/v1/61af4fac457643672d5d5ce8/ec99ef5d-a40a-48fd-8558-740b6035ecf3/no3-gin-award-winning-luxury-classic-london-dry-gin-juniper-citrus-spice-supreme-champion-spirit-cocktail-recipes-the-perfect-clover-club.jpg"
+  },
+  {
+    "name": "Rum Punch",
+    "description": "A tropical mix of rum, citrus juices, and grenadine.",
+    "img_url": "https://www.liquor.com/thmb/l-gbM1l8T2Yk730UcaG533aoB6Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Rum-Punch-1500x1500-hero-a788139c2ae54a1781947f4ad827c607.jpg"
+  },
+  {
+    "name": "Sea Breeze",
+    "description": "A refreshing mix of vodka, cranberry juice, and grapefruit juice.",
+    "img_url": "https://www.thespruceeats.com/thmb/cQScxpY3RjoQ9Cg2hGmfa4TgSO8=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/sea-breeze-cocktail-recipe-760599-7aa95a0f5eca48ed90b32ecc471c3541.jpg"
+  },
+  {
+    "name": "Long Island Iced Tea",
+    "description": "A classic, potent mix of vodka, tequila, rum, gin, triple sec, lemon juice, and cola.",
+    "img_url": "https://static1.squarespace.com/static/5bafc73934c4e20db5636a22/t/61cd43b44254e779854bdca1/1640842185440/longislandicedtea.jpg?format=1500w"
+  },
+  {
+    "name": "Tequila Sunrise",
+    "description": "A colorful mix of tequila, orange juice, and grenadine.",
+    "img_url": "https://www.liquor.com/thmb/4a5XHgm78VxmIq6AJ5Zq3VK12a4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/tequila-sunrise-1500x1500-hero-eeae10efeb134a3e9d5a3852b1b6e7dc.jpg"
+  },
+  {
+    "name": "Boulevardier",
+    "description": "A sophisticated mix of bourbon, sweet vermouth, and Campari.",
+    "img_url": "https://media-cldnry.s-nbcnews.com/image/upload/newscms/2024_28/2066842/boulevardier-weston-kloefkorn-mc-1x1-240710.jpg"
+  },
+  {
+    "name": "Aviation",
+    "description": "A classic mix of gin, maraschino liqueur, creme de violette, and lemon juice.",
+    "img_url": "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FEdit%2F2022-09-Aviation-Cocktail%2FAviation_Cocktail"
+  },
+  {
+    "name": "Bahama Mama",
+    "description": "A tropical mix of rum, coconut liqueur, pineapple juice, and grenadine.",
+    "img_url": "https://www.allrecipes.com/thmb/mq6pp7-g9mfUTyDEfcmpP2jjd5o=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/9306024-fc0cbe285b374781aa64f2072c9fa8ef.jpg"
+  },
+  {
+    "name": "Zombie",
+    "description": "A potent mix of various rums, fruit juices, and grenadine.",
+    "img_url": "https://www.liquor.com/thmb/clZPgg_zR19i4AsOTEuhdeWI_Bs=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/Zombie_Cocktail_2667x2667_primary-4416b8395efd4a3986c209371e628e63.jpg"
+  },
+  {
+    "name": "Cuba Libre",
+    "description": "A simple mix of rum, cola, and lime juice.",
+    "img_url": "https://www.thespruceeats.com/thmb/ewg86AUnat9Lu5tFBGlCLzDx05g=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/cuba-libre-recipe-759291-tom-macy-2020-edit-450a61241d7849c08decf62c3df896d3.jpg"
+  },
+  {
+    "name": "Rusty Nail",
+    "description": "A smoky blend of Scotch whisky and Drambuie.",
+    "img_url": "https://www.liquor.com/thmb/8eQKWH8ttWJgA8v_DhvKT38LWXU=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/rusty-nail-4000x4000-primary-ig-989c6683bf8b41a78351896b79d6d01c.jpg"
+  },
+  {
+    "name": "Pornstar Martini",
+    "description": "A fruity mix of vodka, passion fruit liqueur, and lime juice.",
+    "img_url": "https://www.liquor.com/thmb/i2DkWJ_hmom5HX0FZCViCl13FUE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/pornstar-martini-1500x1500-hero-56a952f5ff044877ab9797b424ec21ed.jpg"
+  },
+  {
+    "name": "Kir Royale",
+    "description": "A sparkling mix of creme de cassis and Champagne.",
+    "img_url": "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_1:1/k%2FPhoto%2FSeries%2F2021-10-kir-royale%2F2021-09-30_ATK12163"
+  },
+  {
+    "name": "Blue Lagoon",
+    "description": "A vibrant mix of vodka, blue curacao, and lemonade.",
+    "img_url": "https://lh3.googleusercontent.com/RBIbQ9PioPfMpTKHWxkICnXRw2x2m-dwGCMz5t2YTHs56h-4h8Thzb2GTifJ2s16frwwxCz-Y21IXBlFh48VVI10NiLxtsIC6g=w1500-h1500-c-rw-v1-e365"
+  }
+]

@@ -1,1 +1,9 @@
-<div>Yadda</div>
+<body>
+  <main>
+    {{#each (slice beverages 0 5) as |beverage|}}
+      {{> beverage-details}}
+    {{/each}}
+  </main>
+
+  <script src="/js/assign-gradients.js"></script>
+</body>
