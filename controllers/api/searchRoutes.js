@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { Beverage, Ingredient } = require('../../models');
+const { Beverage, Ingredient, BeverageIngredient } = require('../../models');
 const { Op } = require('sequelize');
 
 router.get('/search', async (req, res) => {
@@ -25,8 +25,15 @@ router.get('/search', async (req, res) => {
       include: [
         {
           model: Ingredient,
-          through: 'beverage_ingredients'
+          attributes: ['id', 'name'], // Include only necessary attributes from Ingredient
+          through: {
+            model: BeverageIngredient,
+            attributes: ['parts'], // Include parts from the join table
+          },
         }
+      ],
+      order: [
+        ['name', 'ASC']
       ]
     });
 
@@ -39,9 +46,12 @@ router.get('/search', async (req, res) => {
     }
 
     console.log('Beverages Found:', beverages.map(b => b.name));
+    beverages.forEach(beverage => {
+      console.log(`Ingredients for ${beverage.name}:`, beverage.ingredients.map(i => i.name));
+    });
 
     res.render('searchResults', {
-      beverages,
+      beverages: beverages.map(beverage => beverage.get({ plain: true })),
       searchQuery,
       logged_in: req.session.logged_in
     });

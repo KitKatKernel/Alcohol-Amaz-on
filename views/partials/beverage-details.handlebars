@@ -1,16 +1,27 @@
-<div class="card bev-card">
-  <img class="card-img-top bev-img" src={{img_url}} alt="Drink picture">
-  <div class="card-body">
-    <h5 class="card-title">{{name}}</h5>
-    <p class="card-text">{{description}}</p>
-  </div>
-  <ul class="list-group list-flush">
-    {{#each ingredients as |ingredient|}}
-      <li class="list-group-item">{{ingredient.name}}</li>
-    {{/each}}
-  </ul>
-  <div class="card-body">
-    <a href="/api/beverages/{{id}}" class="btn btn-primary">View Recipe</a>
-    <a href="/reviews/submit/{{id}}" class="btn btn-primary">Submit a Review</a>
+<div class="outer-card gradient-card">
+  <div class="card-wrapper">
+    <div class="card">
+      <img class="card-img-top" src="{{img_url}}" alt="{{name}}">
+      <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <p class="card-text">{{description}}</p>
+      </div>
+      <div class="card-body">
+        <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#ingredientsList-{{id}}" aria-expanded="false" aria-controls="ingredientsList-{{id}}">
+          Show Ingredients
+        </button>
+        <div class="collapse" id="ingredientsList-{{id}}">
+          <ul class="list-group list-flush">
+            {{#each ingredients as |ingredient|}}
+              <li class="list-group-item">{{ingredient.name}} ({{ingredient.beverage_ingredient.parts}} parts)</li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+      <div class="card-body">
+        <a href="/api/beverages/{{id}}" class="btn btn-primary">View Recipe</a>
+        <a href="/reviews/submit/{{id}}" class="btn btn-primary">Submit a Review</a>
+      </div>
+    </div>
   </div>
 </div>

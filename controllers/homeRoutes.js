@@ -1,20 +1,31 @@
 const router = require('express').Router();
-const { Beverage, Ingredient, Order } = require('../models');
+const { Beverage, Ingredient, BeverageIngredient, Order } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Render the homepage with all beverages
 router.get('/', withAuth, async (req, res) => {
   try {
     const beverageData = await Beverage.findAll({
-      include: [{ model: Ingredient }],
+      include: [{
+        model: Ingredient,
+        through: {
+          model: BeverageIngredient,
+          attributes: ['parts'],
+        },
+        as: 'ingredients',
+      }],
     }); // Fetch all beverages from the database
+
     const beverages = beverageData.map((beverage) => beverage.get({ plain: true })); // Serialize data
+
+    console.log(beverages); // debug #1
 
     res.render('home', {
       beverages, // Pass beverages data to the template
       logged_in: req.session.logged_in // Pass login status to the template
     });
   } catch (err) {
+    console.error(err); // error debug #1
     res.status(500).json(err); // Send error response if something goes wrong
   }
 });
