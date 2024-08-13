@@ -41,12 +41,12 @@ router.get('/:id', async (req, res) => {
 // Create a beverage recipe.
 router.post('/', withAuth, async (req, res) => {
   try {
-    const { beverageName, description, ingredients } = req.body;
+    const { name, description, ingredients } = req.body;
     console.log(req.body); // Log the request body
 
     // Create the beverage
     const newBeverage = await Beverage.create({
-      name: beverageName,
+      name: name,
       description,
       user_id: req.session.user_id,
     });

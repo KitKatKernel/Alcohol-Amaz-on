@@ -3,7 +3,7 @@ async function newFormHandler(event) {
   event.preventDefault();
   const name = document.querySelector('#beverage_name').value;
   const description = document.querySelector('#description').value;
-  const ingredient = document.querySelector('#ingredientDrop').value;
+  const ingredients = document.querySelector('#ingredientDrop').value;
  
   // ? Send fetch request to add a new drink
   const response = await fetch(`/api/beverages/`, {
@@ -11,7 +11,7 @@ async function newFormHandler(event) {
     body: JSON.stringify({
       name,
       description, 
-      ingredient,
+      ingredients,
     }),
     headers: {
       'Content-Type': 'application/json',

@@ -3,7 +3,7 @@ const { Beverage, Ingredient, Order } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Render the homepage with all beverages
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
   try {
     const beverageData = await Beverage.findAll({
       include: [{ model: Ingredient }],
