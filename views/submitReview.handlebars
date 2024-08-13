@@ -6,8 +6,8 @@
       <input type="number" class="form-control" id="rating" name="rating" min="1" max="5" required>
     </div>
     <div class="form-group">
-      <label for="review">Review:</label> <!-- Changed `comment` to `review` -->
-      <textarea class="form-control" id="review" name="review" rows="3" required></textarea> <!-- Updated textarea id and name -->
+      <label for="review">Review:</label>
+      <textarea class="form-control" id="review" name="review" rows="3" required></textarea>
     </div>
     <button type="submit" class="btn btn-primary">Submit Review</button>
   </form>
@@ -18,12 +18,12 @@
     event.preventDefault();
     const rating = document.getElementById('rating').value;
     const review = document.getElementById('review').value;
-    const beverageId = {{beverage.id}}; 
+    const beverageId = {{beverage.id}};
 
     try {
       const response = await fetch('/api/reviews', {
         method: 'POST',
-        body: JSON.stringify({ rating, review, beverageId }),  // Use `review` instead of `comment`
+        body: JSON.stringify({ rating, review, beverageId }),
         headers: { 'Content-Type': 'application/json' },
       });
 

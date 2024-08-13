@@ -38,13 +38,16 @@ router.get('/beverage/:beverage_id', async (req, res) => {
 // Create new Review
 router.post('/', async (req, res) => {
   try {
-    console.log(req.body); // Debug Logging #1
     const newReview = await Review.create({
-      ...req.body,
-      user_id: req.session.user_id,
+      review: req.body.review,
+      rating: req.body.rating,
+      beverage_id: req.body.beverageId,  // Ensure `beverage_id` is coming from the request body
+      user_id: req.session.user_id,  // Assuming the user is logged in and we have their ID
     });
+
     res.status(200).json(newReview);
   } catch (err) {
+    console.error(err);
     res.status(400).json(err);
   }
 });

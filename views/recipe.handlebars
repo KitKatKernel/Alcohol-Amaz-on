@@ -1,170 +1,28 @@
-
- <h1>Welcome {{name}}</h1>
+<h1>Welcome {{name}}</h1>
 
 <br/>
-  <h2>Create a Recipe</h2>
-  <form class="addBeverage" action="/api/beverages" method="POST">
-    <label>Drink Name</label>
-    <input type="text" id="beverage_name" name="beverage_name" placeholder="Tasty Drink" required>
-    <label>Drink Instructions</label>
-    <textarea type="text" id="description" name="description" placeholder="Description" required></textarea>
-    <select id="ingredientDrop" multiple>
-         <option value="1"> Rum</option>
-    <option value="2"> Coconut Cream</option>
-    <option value="3"> Pineapple Juice</option>
-    <option value="4"> Respado Tequila</option>
-    <option value="5"> Lime Juice</option>
-    <option value="6"> Mint</option>
-    <option value="7"> Soda Water</option>
-    <option value="8"> Vodka</option>
-    <option value="9"> Gin</option>
-    <option value="10"> Lemon Juice</option>
-    <option value="11"> Aromatic Bitters</option>
-    <option value="12"> Cognac</option>
-    <option value="13"> Dry Vermouth</option>
-    <option value="14"> Sweet Vermouth</option>
-    <option value="15"> Orange Bitters</option>
-    <option value="16"> Orange Juice</option>
-    <option value="17"> Triple Sec</option>
-    <option value="18"> Bourbon</option>
-    <option value="19"> Egg White</option>
-    <option value="20"> Grenadine</option>
-    <option value="21"> Grapefruit Juice</option>
-    <option value="22"> Apple Juice</option>
-    <option value="23"> Maraschino Liqueur</option>
-    <option value="24"> Absinthe</option>
-    <option value="25"> Cranberry Juice</option>
-    <option value="26"> Scotch</option>
-    <option value="27"> Heavy Cream</option>
-    <option value="28"> Elderflower Liqueur</option>
-    <option value="29"> Orange Liqueur</option>
-    <option value="30"> Rye Whiskey</option>
-    <option value="31"> Apricot Liqueur</option>
-    <option value="32"> Coffee Liqueur</option>
-    <option value="33"> Blanco Liqueur</option>
-  <option value="34"> Agave Syrup</option>
-    <option value="35"> Ginger Ale</option>
-    <option value="36"> Maple Syrup</option>
-    <option value="37"> Irish Cream Liqueur</option>
-    <option value="38"> Tonic Water</option>
-    <option value="39"> Espresso</option>
-    <option value="40"> Raspberries</option>
-    <option value="41"> Orange Peel</option>
-    <option value="42"> Cherries</option>
-    <option value="43"> Chocolate Bitters</option>
-    <option value="44"> Ginger Liqueur</option>
-    <option value="45"> Limoncello Liqueur</option>
-    <option value="46"> Honey</option>
-    <option value="47"> Milk</option>
-    <option value="48"> Ginger Beer</option>
-    <option value="49"> Lemon Lime Soda</option>
-    <option value="50"> Vanilla Syrup</option>
-    <option value="51"> Salt</option>
-    <option value="52"> Lime</option>
-    <option value="53"> Brandy</option>
-    <option value="54"> Grape Juice</option>
-  <option value="55"> Blueberry Juice</option>
-    <option value="56"> Cherry Juice</option>
-    <option value="57"> Pomegranate Juice</option>
-    <option value="58"> Olive</option>
-    <option value="59"> Simple Syrup</option>
-    <option value="60"> Sugar</option>
-    <option value="61"> Champagne</option>
-    <option value="62"> Water</option>
-    <option value="63"> Angostura Bitters</option>
-    <option value="64"> Light Rum</option>
-    <option value="65"> Powdered Sugar</option>
-    <option value="66"> Ice</option>
-    <option value="67"> Maraschino Cherry</option>
-    <option value="68"> Campari</option>
-    <option value="69"> Cointreau</option>
-    <option value="70"> Tomato Juice</option>
-    <option value="71"> Worcestershire Sauce</option>
-    <option value="72"> Tabasco</option>
-    <option value="73"> Blended Whiskey</option>
-    <option value="74"> Lemon</option>
-    <option value="75"> Cherry</option>
-    <option value="76"> Club Soda</option>
-    <option value="77"> Orange</option>
-    <option value="78"> Orgeat Syrup</option>
-    <option value="79"> Sweet and Sour</option>
-    <option value="80"> Sugar Syrup</option>
-    <option value="81"> Ricard</option>
-    <option value="82"> Peychaud Bitters</option>
-    <option value="83"> Cherry Brandy</option>
-    <option value="84"> Carbonated Water</option>
-    <option value="85"> Dark Rum</option>
-    <option value="86"> Aperol</option>
-    <option value="87"> Prosecco</option>
-    <option value="88"> Cachaca</option>
-    <option value="89"> Lillet Blanc</option>
-    <option value="90"> Irish Whiskey</option>
-    <option value="91"> Whipped Cream</option>
-    <option value="92"> Coffee</option>
-    <option value="93"> Creme de Cacao</option>
-    <option value="94"> Light Cream </option>
-    <option value="95"> Nutmeg</option>
-    <option value="96"> Pisco</option>
-    <option value="97"> Passoa</option>
-    <option value="98"> Blue Curacao</option>
-    <option value="99"> Peach Schnapps</option>
-    <option value="100"> Vanilla Extract</option>
-    <option value="101"> Fruit Punch</option>
-    <option value="102"> Coca-Cola</option>
-    <option value="103"> Banana Liqueur</option>
-    <option value="104"> Gold Rum</option>
-    <option value="105"> 151 Proof Rum</option>
-    <option value="106"> Pernod</option>
-    <option value="107"> Drambuie</option>
-    <option value="108"> Passion Fruit Juice</option>
-    <option value="109"> Creme de Cassis</option>
-    <option value="110"> Lemonade</option>
-    <option value="111"> Blackberry Liqueur</option>
-    <option value="112"> Amaretto</option>
-    <option value="113"> Baileys Irish Cream</option>
-    <option value="114"> Curacao</option>
-    <option value="115"> Jagermeister</option>
-    <option value="116"> Sambuca </option>
-    <option value="117"> Frangelico</option>
-    <option value="118"> Galliano</option>
-    <option value="119"> Grand Marnier</option>
-    <option value="120"> Benedictine</option>
-    <option value="121"> Chartreuse</option>
-    <option value="122"> Strega</option>
-    <option value="123"> Midori</option>
-    <option value="124"> Kahlua</option>
-    <option value="125"> Anisette</option>
-    <option value="126"> Licor 43</option>
-    <option value="127"> Crème de Menthe</option>
-   <option value="128"> Mezcal</option>
-    <option value="129"> Sour Mix</option>
-    <option value="130"> Falernum</option>
-    <option value="131"> Cynar </option>
-    <option value="132"> Fernet Branca</option>
-   <option value="133"> Suze</option>
-    <option value="134"> Averna</option>
-    <option value="135"> Peychaud's Bitters </option>
-    <option value="136"> Peach Bitters</option>
-    <option value="137"> Celery Bitters</option>
-    <option value="138"> Rosemary </option>
-    <option value="139"> Thyme </option>
-    <option value="140"> Basil</option>
-    <option value="141"> Cinnamon Stick</option>
-    <option value="142"> Clove</option>
-    <option value="143"> Black Pepper </option>
-    <option value="144"> Cardamom</option>	
-    <option value="145"> Star Anise </option>
-    <option value="146"> Raisins</option>
-    <option value="147"> Grape Soda</option>
-
-    </select>
-    <button type="submit">Create</button>
-  </form>
+<h2>Create a Recipe</h2>
+<form class="addBeverage" action="/api/beverages" method="POST">
+  <label>Drink Name</label>
+  <input type="text" id="beverage_name" name="beverage_name" placeholder="Tasty Drink" required>
+  <label>Drink Instructions</label>
+  <textarea type="text" id="description" name="description" placeholder="Description" required></textarea>
+  <label>Ingredients</label>
+  <select id="ingredientDrop">
+    {{#each ingredients}}
+      <option value="{{this.id}}">{{this.name}}</option>
+    {{/each}}
+  </select>
+  <label>Parts</label>
+  <input type="number" id="ingredientParts" name="ingredientParts" min="1" required>
+  <button type="button" id="addIngredient">Add Ingredient</button>
+  <ul id="ingredientList"></ul>
+  <button type="submit">Create</button>
+</form>
 
 {{#if beverages.length}}
   <div class="col-md-6 project-list">
     <h3>Current Projects:</h3>
-
     {{#each beverages as |beverage|}}
     <div class="row mb-2">
       <div class="col-md-8">
@@ -176,7 +34,6 @@
     </div>
     {{/each}}
   </div>
-  {{/if}}
-
+{{/if}}
 
 <script src="/js/add-beverage.js"></script>

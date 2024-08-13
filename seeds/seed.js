@@ -32,13 +32,21 @@ const seedDatabase = async () => {
     await bev.addIngredients(beverage.ingredient_ids);
   }
 
+  // Seed Reviews
+  const reviews = await Promise.all(
+    reviewData.map(async review => {
+      const beverage = beverages.find(b => b.name === review.beverage_name); // Assume `reviewData.json` includes a `beverage_name` field
+      return Review.create({
+        user_id: review.user_id,
+        beverage_id: beverage.id,
+        review: review.review,
+        rating: review.rating
+      });
+    })
+  );
+
   // Seed Lists
   const lists = await List.bulkCreate(listData, {
-    returning: true,
-  });
-
-  // Seed Reviews
-  const reviews = await Review.bulkCreate(reviewData, {
     returning: true,
   });
 
