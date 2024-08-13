@@ -190,3 +190,14 @@ footer {
     box-shadow: 2px 2px var(--dark);
 }
 
+.bev-img {
+    height: 500px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bev-card {
+    width: 500px;
+}

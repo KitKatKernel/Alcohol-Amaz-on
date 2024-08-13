@@ -38,7 +38,7 @@ const seedDatabase = async () => {
       const beverage = beverages.find(b => b.name === review.beverage_name); // Assume `reviewData.json` includes a `beverage_name` field
       return Review.create({
         user_id: review.user_id,
-        beverage_id: beverage.id,
+        // beverage_id: beverage.id,
         review: review.review,
         rating: review.rating
       });
