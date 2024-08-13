@@ -1,13 +1,9 @@
 <body>
-    {{!-- <aside>
-        {{> small-beverage-details}}
-        {{> small-beverage-details}}
-        {{> small-beverage-details}}
-        {{> small-beverage-details}}
-    </aside> --}}
-    <main>
-       {{#each beverages as |beverage|}}
-        {{> beverage-details}}
+  <main>
+    {{#each (slice beverages 0 5) as |beverage|}}
+      {{> beverage-details}}
     {{/each}}
-    </main>
+  </main>
+
+  <script src="/js/assign-gradients.js"></script>
 </body>

@@ -30,7 +30,7 @@
     --gradient-cambridge-tea: linear-gradient(90deg, var(--cambridge-blue), var(--tea-green));
     --gradient-coyote-brilliant: linear-gradient(90deg, var(--coyote), var(--brilliant-rose));
     --gradient-coyote-sunglow: linear-gradient(90deg, var(--coyote), var(--sunglow));
-    --gradient-coyote-tea: linear-gradient(90deg, var(--coyote), var(--tea-green));
+    --gradient-coyote-tea: linear-gradient(90deg, var (--coyote), var(--tea-green));
     --gradient-brilliant-sunglow: linear-gradient(90deg, var(--brilliant-rose), var(--sunglow));
     --gradient-brilliant-tea: linear-gradient(90deg, var(--brilliant-rose), var(--tea-green));
     --gradient-sunglow-tea: linear-gradient(90deg, var(--sunglow), var(--tea-green));
@@ -64,35 +64,128 @@ body {
     flex-direction: column;
     min-height: 100vh;
     justify-content: flex-start;
-    background-color: var(--cambridge-blue);
+    background-color: white;
 }
 
-header {
-    padding: 40px;
-    text-align: center;
+.custom-navbar {
+    padding: 20px;
     background-image: var(--gradient-cambridge-brilliant-sunglow-45deg);
-    color: var(--brilliant-rose);
-    position: relative; /* I need this for the ::after element */
-    border-bottom-style: solid;
+    color: white;
+    position: relative;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-header::after {
-    content: '';
+.custom-navbar .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+}
+
+.custom-navbar .navbar-brand {
+    font-size: 30px;
+    color: white;
+    text-shadow: 1px 5px 5px var(--tea-green);
+}
+
+
+.custom-navbar .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.custom-navbar .nav-item {
+    margin: 0;
+}
+
+.custom-navbar .nav-link {
+    text-decoration: none;
+    color: var(--brilliant-rose);
+    font-size: 1.2rem;
+}
+
+.custom-navbar .nav-link:hover {
+    color: var(--primary);
+}
+
+.custom-navbar .navbar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto; /* Push the search form to the far right */
+}
+
+.search-input {
+    padding: 8px;
+    font-size: 1rem;
+    border: 2px solid var(--brilliant-rose);
+    border-radius: var(--border-radius);
+    flex-grow: 1;
+    margin-right: 10px;
+}
+
+.search-button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    border: 2px solid var(--brilliant-rose);
+    border-radius: var(--border-radius);
+    background-color: var(--brilliant-rose);
+    color: var(--light);
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: var(--sunglow);
+    border-color: var(--primary);
+    color: var(--dark);
+}
+
+.custom-navbar .navbar-nav .nav-link,
+.custom-navbar .search-button {
+    font-size: 25px;
+    color: white;
+    text-shadow: 1px 5px 5px var(--brilliant-rose);
+}
+
+.custom-navbar .navbar-nav .nav-link {
     display: block;
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    right: 0;
-    height: 5px;
-    background: var(--gradient-cambridge-brilliant-tea-270deg); 
-    z-index: 1; 
 }
 
+.custom-navbar .navbar-nav .nav-item {
+    display: list-item;
+}
+
+.custom-navbar .container {
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+  
 
 main {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column; 
+    align-items: center; 
     flex-grow: 1;
 }
 
@@ -127,7 +220,6 @@ footer {
 
 .nav-item {
     display: flex;
-    background-color: var(--tea-green);
 }
 
 .beverage-card {
@@ -190,3 +282,143 @@ footer {
     box-shadow: 2px 2px var(--dark);
 }
 
+
+.card-wrapper {
+    width: 100%;
+    max-width: 500px;
+    padding: 30px;
+    background-color: var(--light);
+    border-radius: 0.75rem;
+    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 30px;
+    position: relative;
+    display: block; 
+    margin-left: auto;
+    margin-right: auto; 
+    margin-top: 50px;
+}
+
+.card-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -15px; 
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    z-index: -1;
+    border-radius: 0.75rem; 
+    background-size: cover;
+    background-position: center;
+    background-image: var(--gradient); 
+}
+
+
+.card {
+    background-color: white;
+    border-radius: 0.75rem; 
+    overflow: hidden;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.card .card-header {
+    background-color: var(--light-dark);
+    border-bottom: 1px solid var(--light-dark);
+    padding: 10px;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card .card-body {
+    padding: 15px;
+}
+
+.card .card-title {
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    color: var(--dark);
+}
+
+.card .card-text {
+    margin-bottom: 15px;
+    color: var(--dark);
+}
+
+.list-group-item {
+    border: none;
+    padding: 10px 15px;
+    background-color: var(--light);
+    border-radius: 0.25rem;
+    margin-bottom: 5px;
+}
+
+/* I was gonna try and make the gradients animated, but it just looks dumb
+@keyframes gradientAnimation {
+    0% {
+        background-image: var(--gradient-cambridge-brilliant-sunglow-45deg);
+    }
+    25% {
+        background-image: var(--gradient-cambridge-brilliant-tea-90deg);
+    }
+    50% {
+        background-image: var(--gradient-brilliant-sunglow-tea-180deg);
+    }
+    75% {
+        background-image: var(--gradient-cambridge-sunglow-tea-45deg);
+    }
+    100% {
+        background-image: var(--gradient-cambridge-brilliant-sunglow-45deg);
+    }
+} */
+ 
+.gradient-border {
+    border: 4px solid;
+    border-image: linear-gradient(
+      to right,
+      #ff9a9e 0%,
+      #fecfef 99%,
+      #fecfef 100%
+    );
+    border-image-slice: 1;
+  }
+  
+  .navbar .container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  
+  .navbar-nav {
+    flex-wrap: wrap;
+  }
+  
+  .navbar-brand {
+    font-size: 50px;
+  }
+  
+  .form-inline {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .form-control {
+    flex: 1;
+    min-width: 60%;
+  }
+  
+  .btn {
+    flex-shrink: 0;
+  }
+  
+  @media (min-width: 992px) {
+    .navbar .container {
+      flex-direction: row;
+      align-items: center;
+    }
+    
+    .form-inline {
+      margin-top: 0;
+      width: auto;
+      margin-left: auto;
+    }
+  }
+  

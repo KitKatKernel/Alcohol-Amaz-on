@@ -26,6 +26,10 @@ Beverage.init(
         key: 'id',
       },
     },
+    img_url: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
   },
   {
     sequelize,

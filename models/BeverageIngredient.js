@@ -13,6 +13,7 @@ BeverageIngredient.init(
     },
     beverage_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'beverage',
         key: 'id',

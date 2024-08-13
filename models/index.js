@@ -25,8 +25,8 @@ Beverage.hasMany(Review, { foreignKey: 'beverage_id', onDelete: 'CASCADE' });
 Review.belongsTo(Beverage, { foreignKey: 'beverage_id' });
 
 // BeverageIngredients associations
-Beverage.belongsToMany(Ingredient, { through: 'beverage_ingredients', foreignKey: 'beverage_id' });
-Ingredient.belongsToMany(Beverage, { through: 'beverage_ingredients', foreignKey: 'ingredient_id' });
+Beverage.belongsToMany(Ingredient, { through: BeverageIngredient, foreignKey: 'beverage_id' });
+Ingredient.belongsToMany(Beverage, { through: BeverageIngredient, foreignKey: 'ingredient_id' });
 
 Beverage.hasMany(List, { foreignKey: 'beverage_id', onDelete: 'CASCADE' });
 List.belongsTo(Beverage, { foreignKey: 'beverage_id' });

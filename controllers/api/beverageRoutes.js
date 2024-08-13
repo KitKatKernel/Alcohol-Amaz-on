@@ -5,11 +5,32 @@ const withAuth = require('../../utils/auth');
 // Get all beverages recipes
 router.get('/', async (req, res) => {
   try {
-    const beverages = await Beverage.findAll({
-      include: [{ model: Ingredient }],
+    const beverageData = await Beverage.findAll({
+      include: [
+        {
+          model: Ingredient,
+          attributes: ['id', 'name'], // Include only necessary attributes from Ingredient
+          through: {
+            model: BeverageIngredient,
+            attributes: ['parts'], // Include parts from the join table
+          },
+        }
+      ],
+      order: [
+        ['name', 'ASC'] // Order the beverages alphabetically by name
+      ]
     });
+
+    if (beverageData.length === 0) {
+      return res.status(404).json({ message: 'No beverages found!' });
+    }
+
+    // Map beverage data to plain objects
+    const beverages = beverageData.map(beverage => beverage.get({ plain: true }));
+
     res.status(200).json(beverages);
   } catch (err) {
+    console.error('Error fetching beverages:', err.message);
     res.status(500).json(err);
   }
 });
@@ -17,53 +38,67 @@ router.get('/', async (req, res) => {
 // Get a single beverage recipe by ID
 router.get('/:id', async (req, res) => {
   try {
-    const beverage = await Beverage.findByPk(req.params.id, {
+    const beverageData = await Beverage.findByPk(req.params.id, {
       include: [
-        { model: Ingredient },
-        { model: Review },
+        {
+          model: Ingredient,
+          attributes: ['id', 'name'], // Include only necessary attributes from Ingredient
+          through: {
+            model: BeverageIngredient,
+            attributes: ['parts'], // Include parts from the join table
+          },
+        },
+        { model: Review }, // Include associated reviews
       ],
     });
 
-    if (!beverage) {
-      res.status(404).json({ message: 'No beverage found with this id!' });
-      return;
+    if (!beverageData) {
+      return res.status(404).json({ message: 'No beverage found with this id!' });
     }
 
+    // Map the beverage data to a plain object
+    const beverage = beverageData.get({ plain: true });
+
     res.render('beverage', {
-      beverage: beverage.get({ plain: true }), // Pass the beverage data as a plain object
+      beverage,
       logged_in: req.session.logged_in
     });
   } catch (err) {
+    console.error('Error fetching beverage by ID:', err.message);
     res.status(500).json(err);
   }
 });
 
-// Create a beverage recipe.
+// Create a beverage recipe
 router.post('/', withAuth, async (req, res) => {
   try {
     const { beverageName, description, ingredients } = req.body;
-    console.log(req.body); // Log the request body
 
-    // Create the beverage
+    console.log('Received data:', req.body);
+
     const newBeverage = await Beverage.create({
       name: beverageName,
       description,
       user_id: req.session.user_id,
     });
 
-    // Add ingredients to the beverage
+    console.log('Created beverage:', newBeverage);
+
     for (const ingredient of ingredients) {
-      console.log(ingredient); // Log each ingredient
+      console.log('Adding ingredient:', ingredient);
+
       await BeverageIngredient.create({
-        beverage_ids: newBeverage.id,
-        ingredient_ids: parseInt(ingredient.id, 10),
+        beverage_id: newBeverage.id,
+        ingredient_id: parseInt(ingredient.id, 10),
         parts: parseInt(ingredient.parts, 10),
       });
+
+      console.log('Ingredient added:', ingredient);
     }
 
     res.status(200).json(newBeverage);
   } catch (err) {
-    console.error(err); // Log the error
+    console.error('Error creating beverage:', err);
     res.status(400).json(err);
   }
 });
@@ -77,8 +112,7 @@ router.put('/:id', async (req, res) => {
       },
     });
     if (!updatedBeverage[0]) {
-      res.status(404).json({ message: 'No beverage found with this id!' });
-      return;
+      return res.status(404).json({ message: 'No beverage found with this id!' });
     }
     res.status(200).json(updatedBeverage);
   } catch (err) {
@@ -95,8 +129,7 @@ router.delete('/:id', async (req, res) => {
       },
     });
     if (!beverageData) {
-      res.status(404).json({ message: 'No beverage found with this id!' });
-      return;
+      return res.status(404).json({ message: 'No beverage found with this id!' });
     }
     res.status(200).json(beverageData);
   } catch (err) {
