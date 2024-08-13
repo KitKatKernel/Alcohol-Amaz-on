@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Beverage, Ingredient, Review } = require('../../models');
+const { Beverage, Ingredient, Review, BeverageIngredient } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 // Get all beverages recipes
@@ -41,14 +41,29 @@ router.get('/:id', async (req, res) => {
 // Create a beverage recipe.
 router.post('/', withAuth, async (req, res) => {
   try {
+    const { beverageName, description, ingredients } = req.body;
+    console.log(req.body); // Log the request body
+
+    // Create the beverage
     const newBeverage = await Beverage.create({
-      name: req.body.name,
-      description: req.body.description,
-      ingredient_ids: req.body.ingredient,
+      name: beverageName,
+      description,
       user_id: req.session.user_id,
     });
+
+    // Add ingredients to the beverage
+    for (const ingredient of ingredients) {
+      console.log(ingredient); // Log each ingredient
+      await BeverageIngredient.create({
+        beverage_ids: newBeverage.id,
+        ingredient_ids: parseInt(ingredient.id, 10),
+        parts: parseInt(ingredient.parts, 10),
+      });
+    }
+
     res.status(200).json(newBeverage);
   } catch (err) {
+    console.error(err); // Log the error
     res.status(400).json(err);
   }
 });

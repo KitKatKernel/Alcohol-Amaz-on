@@ -36,4 +36,10 @@ Beverage.init(
   }
 );
 
+Beverage.prototype.getAverageRating = async function() {
+  const reviews = await this.getReviews();
+  const totalRating = reviews.reduce((sum, review) => sum + review.rating, 0);
+  return totalRating / reviews.length;
+};
+
 module.exports = Beverage;

@@ -1,27 +1,16 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-// Review model definition
-class Review extends Model {}
+class BeverageIngredient extends Model {}
 
-Review.init(
+BeverageIngredient.init(
   {
-    // Review ID: Primary key auto-incremented
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true,
     },
-    // Foreign key referencing User model
-    user_id: {
-      type: DataTypes.INTEGER,
-      references: {
-        model: 'user',
-        key: 'id',
-      },
-    },
-    // Foreign key referencing Beverage model
     beverage_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -29,24 +18,25 @@ Review.init(
         key: 'id',
       },
     },
-    // Review text
-    review: {
-      type: DataTypes.TEXT,
-      allowNull: false,
+    ingredient_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'ingredient',
+        key: 'id',
+      },
     },
-    // Rating
-    rating: {
+    parts: {
       type: DataTypes.INTEGER,
       allowNull: false,
-    }
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'review',
+    modelName: 'beverage_ingredient',
   }
 );
 
-module.exports = Review;
+module.exports = BeverageIngredient;

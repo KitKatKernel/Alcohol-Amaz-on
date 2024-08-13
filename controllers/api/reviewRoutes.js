@@ -38,6 +38,7 @@ router.get('/beverage/:beverage_id', async (req, res) => {
 // Create new Review
 router.post('/', async (req, res) => {
   try {
+    console.log(req.body); // Debug Logging #1
     const newReview = await Review.create({
       ...req.body,
       user_id: req.session.user_id,
