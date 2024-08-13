@@ -22,7 +22,7 @@ const seedDatabase = async () => {
   });
 
   // Seed Beverages
-  const beverages = await Beverage.bulkCreate(beverageData.map(bev => ({ name: bev.name, description: bev.description })), {
+  const beverages = await Beverage.bulkCreate(beverageData.map(bev => ({ name: bev.name, description: bev.description, img_url: bev.img_url })), {
     returning: true,
   });
 

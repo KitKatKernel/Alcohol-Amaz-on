@@ -19,6 +19,10 @@ Beverage.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    img_url: {
+      type: DataTypes.TEXT,
+      allowNull: true,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
