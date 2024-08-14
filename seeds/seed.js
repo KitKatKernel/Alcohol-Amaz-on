@@ -62,8 +62,7 @@ const seedDatabase = async () => {
     const lists = await List.bulkCreate(listData, {
       returning: true,
     });
-
-    console.log('Seeding complete!');
+    
     process.exit(0);
   } catch (err) {
     console.error('Error during seeding:', err);

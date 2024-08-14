@@ -18,8 +18,6 @@ router.get('/', withAuth, async (req, res) => {
 
     const beverages = beverageData.map((beverage) => beverage.get({ plain: true })); // Serialize data
 
-    console.log(beverages); // debug #1
-
     res.render('home', {
       beverages, // Pass beverages data to the template
       logged_in: req.session.logged_in // Pass login status to the template

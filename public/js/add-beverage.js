@@ -21,9 +21,6 @@ document.getElementById('addIngredient').addEventListener('click', function() {
 
   listItem.appendChild(removeButton);
   ingredientList.appendChild(listItem);
-
-  // Log each added ingredient to the console for debugging
-  console.log('Added ingredient:', { ingredientId, ingredientName, parts });
 });
 
 document.querySelector('.addBeverage').addEventListener('submit', async function(event) {
@@ -37,9 +34,6 @@ document.querySelector('.addBeverage').addEventListener('submit', async function
     id: parseInt(item.dataset.id, 10),
     parts: parseInt(item.dataset.parts, 10),
   }));
-
-  // Debugging log to verify the data being submitted
-  console.log('Submitting beverage:', { beverageName, description, ingredients });
 
   try {
     const response = await fetch('/api/beverages', {
