@@ -14,7 +14,6 @@ async function newFormHandler(event) {
     },
   
   });
-  console.log(name);
 
   if (response.ok) {
     document.location.replace('/');

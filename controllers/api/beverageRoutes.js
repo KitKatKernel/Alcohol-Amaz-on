@@ -74,31 +74,22 @@ router.post('/', withAuth, async (req, res) => {
   try {
     const { beverageName, description, ingredients } = req.body;
 
-    console.log('Received data:', req.body);
-
     const newBeverage = await Beverage.create({
       name: beverageName,
       description,
       user_id: req.session.user_id,
     });
 
-    console.log('Created beverage:', newBeverage);
-
     for (const ingredient of ingredients) {
-      console.log('Adding ingredient:', ingredient);
-
       await BeverageIngredient.create({
         beverage_id: newBeverage.id,
         ingredient_id: parseInt(ingredient.id, 10),
         parts: parseInt(ingredient.parts, 10),
       });
-
-      console.log('Ingredient added:', ingredient);
     }
 
     res.status(200).json(newBeverage);
   } catch (err) {
-    console.error('Error creating beverage:', err);
     res.status(400).json(err);
   }
 });

@@ -12,7 +12,6 @@ router.get('/', withAuth, async (req, res) => {
       where: { user_id: userId },
     });
     const orders = orderData.map(order => order.get({ plain: true }));
-    console.log('Orders:', orders); // Debugging log 1
 
     // Fetch the user's submitted recipes
     const beverageData = await Beverage.findAll({
@@ -34,7 +33,7 @@ router.get('/', withAuth, async (req, res) => {
       logged_in: req.session.logged_in,
     });
   } catch (err) {
-    console.error(err); // Debugging log
+    console.error(err); 
     res.status(500).json(err);
   }
 });

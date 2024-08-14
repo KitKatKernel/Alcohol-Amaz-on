@@ -5,19 +5,18 @@ require('dotenv').config();
 
 let sequelize;
 
-// If application is running on Render using the DB_URL environment variable
+// Checks if the application is deployed using the DB_URL environment variable
 if (process.env.DB_URL) {
   sequelize = new Sequelize(process.env.DB_URL, {
     dialect: 'postgres',
     dialectOptions: {
       ssl: {
         require: true,
-        rejectUnauthorized: false // For self-signed certificates
+        rejectUnauthorized: false // Necessary for self-signed certificates
       }
     }
   });
 } else {
-  // Local environment setup
   sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
