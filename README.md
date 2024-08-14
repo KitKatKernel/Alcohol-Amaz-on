@@ -12,10 +12,10 @@ This site has been deployed on renderer
 Repository: https://github.com/KitKatKernel/Alcohol-Amaz-on.git
 Renderer: 
 
-![Website screenshot 1](assets/images/screenshot1.PNG)
-![Website screenshot 2](assets/images/screenshot2.PNG)
-![Website screenshot 3](assets/images/screenshot3.PNG)
-![Website screenshot 4](assets/images/screenshot4.PNG)
+![Website screenshot 1](assets\images\ASS_Screenshot1.PNG)
+![Website screenshot 2](assets\images\Ass_Screenshot2.PNG)
+![Website screenshot 3](assets\images\Ass_Screenshot3.PNG)
+![Website screenshot 4](assets\images\Ass_Screenshot4.PNG)
 
 ## Credits
 
