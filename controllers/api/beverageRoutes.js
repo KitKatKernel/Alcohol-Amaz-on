@@ -77,7 +77,7 @@ router.post('/', withAuth, async (req, res) => {
     console.log('Received data:', req.body);
 
     const newBeverage = await Beverage.create({
-      name: name,
+      name: beverageName,
       description,
       user_id: req.session.user_id,
     });
