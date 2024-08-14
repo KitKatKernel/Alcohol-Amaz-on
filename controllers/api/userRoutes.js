@@ -15,6 +15,7 @@ router.post('/register', async (req, res) => {
 
       // Redirect to the home page for now
       res.redirect('/'); // Maybe the user page later, but I'll need to set it up, something like ('/account');
+      console.log(newUser)
     });
   } catch (err) {
     res.status(400).json(err);
