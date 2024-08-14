@@ -4,17 +4,28 @@ const Sequelize = require('sequelize');
 require('dotenv').config();
 
 let sequelize;
-// Checks to see if the application is deployed. If DB_URL environment variable exists, then that is used. If not, it determines that you're on your local machine and utilizes the environment variables from the .env file to set up Sequelize. 
+
+// If application is running on Render using the DB_URL environment variable
 if (process.env.DB_URL) {
-  sequelize = new Sequelize(process.env.DB_URL);
+  sequelize = new Sequelize(process.env.DB_URL, {
+    dialect: 'postgres',
+    dialectOptions: {
+      ssl: {
+        require: true,
+        rejectUnauthorized: false // For self-signed certificates
+      }
+    }
+  });
 } else {
+  // Local environment setup
   sequelize = new Sequelize(
     process.env.DB_NAME,
     process.env.DB_USER,
     process.env.DB_PASSWORD,
     {
       host: 'localhost',
-      dialect: 'postgres'
+      dialect: 'postgres',
+      port: 5432
     }
   );
 }
