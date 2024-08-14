@@ -6,6 +6,14 @@
 
 This site is a tool for finding cocktail recipes and ordering the required ingredients. Users can add recipes to the database, leave reviews, and rate recipes. You can also view recipes that have been reviewed, along with the ratings and reviews left by others.
 
+## Table of Contents
+
+- [Description](#description)
+- [Usage](#usage)
+- [Installation](#installation)
+- [Credits](#credits)
+- [License](#license)
+
 ## Usage
 
 This site has been deployed on Render.
@@ -49,15 +57,6 @@ To run this project locally:
     ```bash
     npm start
     ```
-
-## Sample Screenshots
-
-Here are some screenshots demonstrating the application's functionality:
-
-![Website screenshot 1](assets/images/ASS_Screenshot1.PNG)
-![Website screenshot 2](assets/images/Ass_Screenshot2.PNG)
-![Website screenshot 3](assets/images/Ass_Screenshot3.PNG)
-![Website screenshot 4](assets/images/Ass_Screenshot4.PNG)
 
 ## Credits
 
